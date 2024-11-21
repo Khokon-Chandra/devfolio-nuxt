@@ -1,5 +1,5 @@
 <template>
-    <section class="relative py-36 md:py-52">
+    <section class="relative py-28 md:py-52">
 
         <!-- 
         <div class="absolute size-8 rounded-full left-[30%] top-[20%] bg-gray-200 dark:bg-red-800/30"></div>
@@ -9,14 +9,14 @@
         <div class="main-container flex flex-col justify-center items-center gap-12">
             <div class="max-w-xl text-center">
                 <h1 class="font-black text-4xl text-gray-500 dark:text-gray-400 mb-4">Hi. I'm Khokon.</h1>
-                <h4 class="font-normal text-lg leading-8 text-gray-600 dark:text-gray-300 text-wrap">Full-Stack
+                <h4 class="font-normal text-lg leading-8 text-gray-700 dark:text-gray-300 text-wrap">Full-Stack
                     Developer. PHP |
                     Laravel |
                     MySql | Vue, Nuxt |
                     Tailwind
                     Building
                     Scalable Web Apps.
-                    <br class="inline md:hidden">
+                    <br class="inline xs:hidden sm:inline md:hidden">
                     If you are looking <br class="hidden md:inline">for capable developer.<br class="inline md:hidden">
                     get in touch.
                 </h4>

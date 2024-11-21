@@ -31,8 +31,8 @@ const projects = [
         <div v-for="project in projects" :key="project"
             class="main-container py-16 md:py-28 flex flex-col gap-8 lg:flex-row items-center justify-between">
 
-            <div class="w-full lg:w-[40%] text-center lg:text-left flex justify-center lg:inline-block">
-                <div class="max-w-md">
+            <div class="w-full lg:w-[40%] text-center lg:text-left">
+                <div class="max-w-md mx-auto ">
                     <h5 class="font-semibold text-lg text-gray-400">{{ project.subtitle }}</h5>
                     <h1 class="font-black text-5xl leading-tight text-gray-400 text-wrap mb-8">{{ project.title }}</h1>
 

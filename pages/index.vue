@@ -16,5 +16,7 @@ const toggleDark = useToggle(isDark)
 
         <Projects />
 
+        <Experience />
+
     </div>
 </template>
