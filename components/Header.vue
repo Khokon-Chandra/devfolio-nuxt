@@ -9,7 +9,7 @@ const sidebarStore = useSidebarStore();
     <div>
 
         <header>
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between">
+            <div class="main-container flex flex-wrap items-center justify-between py-2">
                 <NuxtLink to="/">
                     <Logo></Logo>
                 </NuxtLink>

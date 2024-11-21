@@ -8,3 +8,10 @@
   }
 }
 
+.main-container {
+  @apply max-w-6xl mx-auto px-12 sm:px-8 md:px-12;
+}
+
+.btn-primary {
+  @apply text-sm font-semibold px-6 py-2 text-red-500 rounded-full outline-none border border-red-500 ring-offset-transparent hover:bg-red-500 hover:text-white focus:ring-red-300 focus:outline-none duration-75;
+}

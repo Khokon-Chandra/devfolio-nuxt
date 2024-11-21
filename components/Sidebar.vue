@@ -8,7 +8,7 @@ const isSidebarVisible = computed(() => sidebarStore.isSidebarVisible)
 <template>
     <Transition name="slide-over-left">
         <div v-if="isSidebarVisible"
-            class="fixed z-30 top-0 h-screen w-full bg-gray-50 dark:bg-gray-900 px-4 py-2 space-y-6">
+            class="main-container fixed z-30 top-0 left-0 h-screen w-full bg-gray-50 dark:bg-gray-900 space-y-6">
             <div class="flex items-center justify-between">
                 <NuxtLink to="/">
                     <Logo></Logo>
