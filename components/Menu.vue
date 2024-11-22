@@ -14,11 +14,22 @@ const toggleDark = () => {
     isDark.value = !isDark.value
 }
 
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    }
+}
+
 </script>
 <template>
     <nav class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-12">
 
-        <NuxtLink v-for="link in links" :key="link" :to="`#${link}`" @click="sidebarStore.closeSidebar()">
+        <NuxtLink v-for="link in links" :key="link" :to="`#${link}`"
+            @click="sidebarStore.closeSidebar(); scrollToSection(link)">
             <span
                 class="text-sm font-bold text-gray-600 dark:text-gray-400 py-1 hover:border-b-2 hover:border-b-gray-500 duration-50">{{
                     link }}</span>

@@ -77,7 +77,7 @@ const skills = [
 
 </script>
 <template>
-    <section>
+    <section id="skills">
         <div class="main-container pb-40">
             <h1 class="font-black text-5xl text-gray-400 text-center mb-12">
                 Skills and Technology

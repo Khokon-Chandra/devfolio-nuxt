@@ -26,7 +26,7 @@ const projects = [
 </script>
 
 <template>
-    <section>
+    <section id="Portfolio">
 
         <div v-for="project in projects" :key="project"
             class="main-container py-16 md:py-28 flex flex-col gap-8 lg:flex-row items-center justify-between">

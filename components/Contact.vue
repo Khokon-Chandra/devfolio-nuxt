@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <section>
+    <section id="Contact">
         <div class="main-container py-24">
             <h1 class="font-black text-5xl text-gray-400 text-center mb-10">Say Hi to <span
                     class="text-gray-600 dark:text-gray-300">Khokon</span>.</h1>
@@ -41,7 +41,9 @@
                             <p v-show="false" class="font-normal text-sm text-red-600">Message is required!</p>
                         </div>
 
-                        <button class="border border-gray-500 px-6 py-2 items-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-800 dark:hover:bg-gray-400 hover:text-white dark:hover:text-gray-700 font-bold w-full">Get in touch</button>
+                        <button
+                            class="border border-gray-500 px-6 py-2 items-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-800 dark:hover:bg-gray-400 hover:text-white dark:hover:text-gray-700 font-bold w-full">Get
+                            in touch</button>
                     </form>
                 </div>
             </div>
