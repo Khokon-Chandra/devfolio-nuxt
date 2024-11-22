@@ -1,38 +1,42 @@
 <script lang="ts" setup>
 
+const scroll = useScrollStore();
+
+
 const links = ref([
-    "Portfolio",
-    "Blog",
-    "Contact"
+    {
+        label: 'Portfolio',
+        to: '/#Portfolio',
+    },
+    {
+        label: 'Blog',
+        to: '/blog'
+    },
+
+    {
+        label: 'Contact',
+        to: '/#Contact'
+    }
 ]);
 
 const sidebarStore = useSidebarStore();
 
-const isDark = useDark()
+const colorMode = useColorMode()
 
 const toggleDark = () => {
-    isDark.value = !isDark.value
+    colorMode.preference = colorMode.value == "dark" ? "light" : "dark";
 }
 
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-    }
-}
+const isDark = computed(() => colorMode.value == "dark");
 
 </script>
 <template>
     <nav class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-12">
-
-        <NuxtLink v-for="link in links" :key="link" :to="`#${link}`"
-            @click="sidebarStore.closeSidebar(); scrollToSection(link)">
+        <NuxtLink v-for="link in links" :key="link.label" :to="link.to"
+            @click="sidebarStore.closeSidebar(); scroll.scrollToSection(link.label)">
             <span
                 class="text-sm font-bold text-gray-600 dark:text-gray-400 py-1 hover:border-b-2 hover:border-b-gray-500 duration-50">{{
-                    link }}</span>
+                    link.label }}</span>
         </NuxtLink>
 
         <button @click="toggleDark"

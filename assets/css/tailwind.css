@@ -8,6 +8,10 @@
   }
 }
 
+body {
+  @apply bg-indigo-500/5 dark:bg-gray-900 h-screen overflow-hidden overflow-y-auto;
+}
+
 .main-container {
   @apply max-w-6xl mx-auto px-12 sm:px-8 md:px-12;
 }
