@@ -27,15 +27,15 @@
                 In Touch</button>
 
             <div class="flex items-center gap-8">
-                <a class="cursor-pointer" href="#">
+                <a class="cursor-pointer" target="_blank" href="https://github.com/Khokon-Chandra">
                     <IconsGithub class="size-8 text-gray-600 dark:text-gray-400" />
                 </a>
 
-                <a class="cursor-pointer" href="#">
+                <a class="cursor-pointer" target="_blank" href="https://linkedin.com/in/khokonchandra">
                     <IconsLinkedin class="size-8 text-gray-600 dark:text-gray-400" />
                 </a>
 
-                <a class="cursor-pointer" href="#">
+                <a class="cursor-pointer" target="_blank" href="https://x.com/KhokonChandra12">
                     <IconsTwitter class="size-8 text-gray-600 dark:text-gray-400" />
                 </a>
             </div>

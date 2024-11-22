@@ -44,19 +44,15 @@ const experiences = [
 
             <div class="text-center max-w-2xl mx-auto">
                 <h1 class="font-black text-5xl text-gray-400 mb-4">Professional Experience</h1>
-                <p class="font-medium text-lg text-gray-600 dark:text-gray-400 hidden lg:inline-block text-wrap">
-                    Professional experience in software development is not just about writing lines of code;
-                    it's about crafting solutions, navigating complexities, and continually honing the art of building
-                    the digital future.</p>
             </div>
 
 
-            <div class="p-8 dark:bg-gray-800/20 shadow-2xl">
+            <div class="p-8 dark:bg-gray-800/20 ">
 
                 <div v-for="experience in experiences" class="relative py-6">
                     <div class="absolute w-px bg-gray-300 dark:bg-gray-800 h-full top-0"></div>
                     <div
-                        class="absolute size-3 rounded-full border-2 border-gray-400 dark:border-gray-700 -top-3 -left-[5px]">
+                        class="absolute size-3 rounded-full border-2 border-gray-500 dark:border-gray-700 -top-3 -left-[5.08px]">
                     </div>
 
                     <div class="p-4 space-y-3">

@@ -18,5 +18,9 @@ const toggleDark = useToggle(isDark)
 
         <Experience />
 
+        <Contact />
+
+        <Footer />
+
     </div>
 </template>
