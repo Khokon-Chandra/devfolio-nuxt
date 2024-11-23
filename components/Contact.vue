@@ -9,13 +9,14 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
 
                 <div class="flex-1 space-y-2">
+
                     <div class="flex items-center gap-4">
-                        <IconsEnvelop class="size-8 text-gray-600 dark:text-gray-400" />
+                        <IconsEnvelop class="size-6 text-gray-600 dark:text-gray-400" />
                         <span class="font-medium text-gray-600 dark:text-gray-300">khokonchandra4@gmail.com</span>
                     </div>
 
                     <div class="flex items-center gap-4">
-                        <IconsLocation class="size-8 text-gray-600 dark:text-gray-400" />
+                        <IconsLocation class="size-6 text-gray-600 dark:text-gray-400" />
                         <span class="font-medium text-gray-600 dark:text-gray-300">Dhaka, Bangladesh.</span>
                     </div>
                 </div>
@@ -37,12 +38,12 @@
                         </div>
 
                         <div>
-                            <input class="input" type="text" name="" value="" placeholder="Message">
+                            <textarea class="input" type="text" name="" value="" placeholder="Message"></textarea>
                             <p v-show="false" class="font-normal text-sm text-red-600">Message is required!</p>
                         </div>
 
                         <button
-                            class="border border-gray-500 px-6 py-2 items-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-800 dark:hover:bg-gray-400 hover:text-white dark:hover:text-gray-700 font-bold w-full">Get
+                            class="border border-gray-500 px-6 py-2 items-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-500 dark:hover:bg-gray-400 hover:text-white dark:hover:text-gray-700 font-bold w-full">Get
                             in touch</button>
                     </form>
                 </div>

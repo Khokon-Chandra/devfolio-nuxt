@@ -40,7 +40,7 @@ const experiences = [
 </script>
 <template>
     <section>
-        <div class="main-container py-16 space-y-12">
+        <div class="main-container py-12 space-y-12">
 
             <div class="text-center max-w-2xl mx-auto">
                 <h1 class="font-black text-5xl text-gray-400 mb-4">Professional Experience</h1>
@@ -55,10 +55,10 @@ const experiences = [
                         class="absolute size-3 rounded-full border-2 border-gray-400 dark:border-gray-700 -top-3 -left-[5.08px]">
                     </div>
 
-                    <div class="p-4 space-y-3">
-                        <h3 class="font-bold text-xl text-gray-600 dark:text-gray-400">{{ experience.title }}</h3>
-                        <h4 class="font-bold text-gray-600">{{ experience.date }}</h4>
-                        <h5 class="font-medium text-lg text-gray-500 dark:text-gray-400">{{ experience.company }}</h5>
+                    <div class="p-4 space-y-2">
+                        <h4 class="font-normal text-sm text-gray-600">{{ experience.date }}</h4>
+                        <h3 class="font-bold text-xl text-gray-700 dark:text-gray-300">{{ experience.title }}</h3>
+                        <h5 class="font-semibold text-gray-600 dark:text-gray-400">{{ experience.company }}</h5>
                         <ul class="list-disc list-outside pl-5">
                             <li v-for="item in experience.lists" class="font-normal text-gray-500 text-wrap">{{ item }}
                             </li>

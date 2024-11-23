@@ -17,7 +17,14 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
     config: {
-      darkMode: 'class'
+      darkMode: 'class',
+      theme: {
+        extend: {
+          screens: {
+            'xs': '480px',  // Extra small devices (e.g., small smartphones)
+          },
+        },
+      },
     },
     editorSupport: true
   },

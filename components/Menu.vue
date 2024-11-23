@@ -5,6 +5,10 @@ const scroll = useScrollStore();
 
 const links = ref([
     {
+        label: 'About',
+        to: '/#About'
+    },
+    {
         label: 'Portfolio',
         to: '/#Portfolio',
     },
@@ -40,7 +44,7 @@ const isDark = computed(() => colorMode.value == "dark");
         </NuxtLink>
 
         <button @click="toggleDark"
-            class="px-3 py-2 border dark:bg-gray-800/30 border-gray-200 rounded-xl hover:bg-gray-100 duration-75 dark:border-gray-800 dark:hover:bg-gray-800">
+            class="px-3 py-2 border dark:bg-gray-800/30 border-gray-200 rounded-xl hover:bg-gray-200 duration-75 dark:border-gray-800 dark:hover:bg-gray-800">
             <IconsSun v-if="isDark" class="text-xl text-gray-300 font-bold" title="switch to light mode" />
             <IconsMoon v-if="!isDark" class="text-xl text-gray-600 font-bold" title="switch to dark mode" />
         </button>

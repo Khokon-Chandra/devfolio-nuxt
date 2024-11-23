@@ -10,6 +10,8 @@
 
         <Experience />
 
+        <About />
+
         <Contact />
 
     </div>
