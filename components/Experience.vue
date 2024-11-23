@@ -47,9 +47,9 @@ const experiences = [
             </div>
 
 
-            <div class="p-8 dark:bg-gray-800/20 ">
+            <div class="p-4 dark:bg-gray-800/20">
 
-                <div v-for="experience in experiences" class="relative py-6">
+                <div v-for="experience in experiences" class="relative py-2">
                     <div class="absolute w-px bg-gray-300 dark:bg-gray-800 h-full top-0"></div>
                     <div
                         class="absolute size-3 rounded-full border-2 border-gray-400 dark:border-gray-700 -top-3 -left-[5.08px]">
