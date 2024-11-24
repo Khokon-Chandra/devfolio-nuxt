@@ -14,7 +14,7 @@ const links = ref([
     },
     {
         label: 'Blog',
-        to: '/blog'
+        to: '/posts'
     },
 
     {
@@ -33,6 +33,9 @@ const toggleDark = () => {
 
 const isDark = computed(() => colorMode.value == "dark");
 
+const showToolTip = ref(false);
+
+
 </script>
 <template>
     <nav class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-12">
@@ -43,10 +46,19 @@ const isDark = computed(() => colorMode.value == "dark");
                     link.label }}</span>
         </NuxtLink>
 
-        <button @click="toggleDark"
-            class="px-3 py-2 border dark:bg-gray-800/30 border-gray-200 rounded-xl hover:bg-gray-200 duration-75 dark:border-gray-800 dark:hover:bg-gray-800">
-            <IconsSun v-if="isDark" class="text-xl text-gray-300 font-bold" title="switch to light mode" />
-            <IconsMoon v-if="!isDark" class="text-xl text-gray-600 font-bold" title="switch to dark mode" />
-        </button>
+        <div class="relative">
+
+            <button @click="toggleDark" @mouseenter="showToolTip = true" @mouseleave="showToolTip = false"
+                class="px-3 py-2 border dark:bg-gray-800/30 border-gray-200 rounded-xl hover:bg-gray-200 duration-75 dark:border-gray-800 dark:hover:bg-gray-800">
+                <IconsMoon v-if="isDark" class="text-xl text-gray-300 font-bold" title="switch to dark mode" />
+                <IconsSun v-if="!isDark" class="text-xl text-gray-600 font-bold" title="switch to light mode" />
+            </button>
+
+            <div v-if="showToolTip"
+                class="text-nowrap absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700">
+                Toggle dark mode
+            </div>
+
+        </div>
     </nav>
 </template>

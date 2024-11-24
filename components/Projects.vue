@@ -41,7 +41,7 @@ const projects = [
             </div>
 
             <div class="flex-1 flex justify-center">
-                <img class="max-w-full h-auto object-contain shadow-2xl" :src="project.image" :alt="project.title">
+                <NuxtImg format="webp" sizes="xs:100vw sm:100vw lg:600px" densities="x1" :placeholder="[600, 316, 75, 5]" class="shadow-2xl" :src="project.image" :alt="project.title" />
             </div>
 
         </div>

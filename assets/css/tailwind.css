@@ -9,7 +9,7 @@
 }
 
 body {
-  @apply bg-indigo-500/5 dark:bg-gray-900 h-screen overflow-hidden overflow-y-auto;
+  @apply bg-indigo-500/5 text-gray-700 dark:text-gray-300 dark:bg-gray-900 h-screen overflow-hidden overflow-y-auto;
 }
 
 .main-container {

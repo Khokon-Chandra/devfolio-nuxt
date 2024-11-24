@@ -7,7 +7,9 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@vueuse/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxt/content',
+    '@nuxt/image'
   ],
 
   colorMode: {
@@ -25,6 +27,9 @@ export default defineNuxtConfig({
           },
         },
       },
+      plugins: [
+        require('@tailwindcss/typography')
+      ]
     },
     editorSupport: true
   },
@@ -36,18 +41,8 @@ export default defineNuxtConfig({
         wght: '200..900',
         ital: '200..700',
       },
-      Roboto: true,
-      Inter: [400, 700],
-      'Josefin+Sans': true,
-      Lato: [100, 300],
-      Raleway: {
-        wght: [100, 400],
-        ital: [100]
-      },
-      'Crimson Pro': {
-        wght: '200..900',
-        ital: '200..700',
-      }
+      Roboto: true
+
     },
     download: false
   }
