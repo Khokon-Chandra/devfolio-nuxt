@@ -56,11 +56,11 @@ const experiences = [
                     </div>
 
                     <div class="p-4 space-y-2">
-                        <h4 class="font-normal text-sm text-gray-600">{{ experience.date }}</h4>
+                        <h4 class="font-normal text-sm text-gray-500 dark:text-gray-400">{{ experience.date }}</h4>
                         <h3 class="font-bold text-xl text-gray-700 dark:text-gray-300">{{ experience.title }}</h3>
                         <h5 class="font-semibold text-gray-600 dark:text-gray-400">{{ experience.company }}</h5>
                         <ul class="list-disc list-outside pl-5">
-                            <li v-for="item in experience.lists" class="font-normal text-gray-500 text-wrap">{{ item }}
+                            <li v-for="item in experience.lists" class="font-normal text-gray-600 dark:text-gray-400 text-wrap">{{ item }}
                             </li>
                         </ul>
                     </div>

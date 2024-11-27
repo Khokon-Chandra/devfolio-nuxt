@@ -1,8 +1,10 @@
 <template>
-    <section
-        id="About"
-        class="h-[50rem] w-full bg-[url('/cover.png')] dark:bg-[url('/cover-dark.png')] bg-no-repeat bg-cover bg-top lg:bg-left lg:bg-cover overflow-hidden">
-        <div class="main-container flex flex-col lg:flex-row justify-center lg:justify-end items-end lg:items-center h-full w-full">
+    <section id="About" class="w-full overflow-hidden">
+        <div
+            class="main-container flex flex-col lg:flex-row justify-center lg:justify-end items-center lg:items-center h-full w-full">
+            <div class="flex-1 text-center">
+                <IconsHello class="w-full" />
+            </div>
             <div class="w-full lg:w-[40%] text-center lg:text-left">
                 <h1
                     class="inline-block font-black text-5xl text-gray-600 dark:text-gray-300 mb-4 bg-white/40 dark:bg-gray-800/40">

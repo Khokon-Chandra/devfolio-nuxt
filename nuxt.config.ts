@@ -45,5 +45,24 @@ export default defineNuxtConfig({
 
     },
     download: false
+  },
+
+  content: {
+    highlight: {
+      langs: [
+        'php',
+        'javascript',
+        'c',
+        'cpp',
+        'java',
+        'bash',
+        'sql'
+      ],
+      theme: {
+        default: 'github-light',
+        dark: 'min-dark',
+        light: 'min-light'
+      }
+    }
   }
 })

@@ -9,7 +9,7 @@ image:
 head:
   meta:
     - name: 'keywords'
-      content: 'nuxt, vue, content'
+      content: 'nuxt, vue, content, laravel, php, mysql, api development, laravel developer, php developer.'
     - name: 'robots'
       content: 'index, follow'
     - name: 'author'

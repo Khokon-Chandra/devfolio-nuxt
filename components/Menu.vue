@@ -8,13 +8,15 @@ const links = ref([
         label: 'About',
         to: '/#About'
     },
+
+    {
+        label: 'Blog',
+        to: '/blogs'
+    },
+
     {
         label: 'Portfolio',
         to: '/#Portfolio',
-    },
-    {
-        label: 'Blog',
-        to: '/posts'
     },
 
     {
