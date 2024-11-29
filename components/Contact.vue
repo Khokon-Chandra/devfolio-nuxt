@@ -43,7 +43,7 @@
                         </div>
 
                         <button
-                            class="border border-gray-500 px-6 py-2 items-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-500 dark:hover:bg-gray-400 hover:text-white dark:hover:text-gray-700 font-bold w-full">Get
+                            class="border border-red-500 px-6 py-2 items-center rounded-full text-red-500 dark:text-red-600 hover:bg-red-500 dark:hover:bg-red-500 hover:text-white dark:hover:text-white font-bold w-full">Get
                             in touch</button>
                     </form>
                 </div>

@@ -1,5 +1,5 @@
 <template>
-    <section id="About" class="w-full overflow-hidden">
+    <section id="About" class="py-24">
         <div
             class="main-container flex flex-col lg:flex-row justify-center lg:justify-end items-center lg:items-center h-full w-full">
             <div class="flex-1 text-center">

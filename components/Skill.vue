@@ -84,7 +84,7 @@ const skills = [
             </h1>
 
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center">
-                <div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-lg shadow-2xl flex flex-col p-4 items-center justify-center gap-4"
+                <div class="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-800 rounded-lg shadow-2xl flex flex-col p-4 items-center justify-center gap-4"
                     v-for="skill in skills" :key="skill.label">
                     <div>
                         <component class="size-12" :is="skill.component" />
