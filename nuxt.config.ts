@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
@@ -18,19 +17,7 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
-    config: {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          screens: {
-            'xs': '480px',  // Extra small devices (e.g., small smartphones)
-          },
-        },
-      },
-      plugins: [
-        require('@tailwindcss/typography')
-      ]
-    },
+    configPath: 'tailwind.config.js',
     editorSupport: true
   },
 
