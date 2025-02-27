@@ -49,8 +49,8 @@ useSeoMeta({
     { name: 'keywords', content: 'Full-stack web developer, Backend Developer, Laravel developer, Laravel, PHP, MySQL, Vue.js, Nuxt.js, Tailwind CSS, JavaScript' },
     { property: 'og:title', content: 'Khokon Chandra | Laravel and Full-Stack Developer' },
     { property: 'og:description', content: 'Explore the portfolio of Khokon Chandra, showcasing innovative solutions and expertise in full-stack development with Laravel, PHP, and Vue.js.' },
-    { property: 'og:url', content: 'http://localhost:3000' },
-    { property: 'og:image', content: 'http://localhost:3000/hero.png' },
+    { property: 'og:url', content: 'https://khokon.vercel.app/' },
+    { property: 'og:image', content: 'https://khokon.vercel.app/hero.png' },
 
     { name: 'twitter:title', content: 'Khokon Chandra – Full Stack Web Developer' },
     { name: 'twitter:description', content: 'Expert in PHP, Laravel, MySQL, API development, Vue.js, and scalable web solutions. Check out my portfolio for modern, high-performance applications.' },
