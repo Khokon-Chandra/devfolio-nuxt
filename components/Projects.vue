@@ -2,25 +2,26 @@
 
 const projects = [
     {
-        title: 'Real-Time Communication',
-        subtitle: 'WeMeet - RTC web application',
-        slug: '#',
-        image: '/wemeet.png'
-    },
-
-    {
         title: 'AlgoCode Online judge',
         subtitle: 'Inspired by leetcode.com',
-        slug: '#',
+        slug: 'https://github.com/Khokon-Chandra/algoleetcode',
         image: '/leetcode.png'
     },
 
     {
         title: '1tool CRM contest',
         subtitle: 'CRM - 1tool vue/nuxt',
-        slug: '#',
+        slug: 'https://1tool-one.vercel.app/',
         image: '/1tool.png'
+    },
+
+    {
+        title: 'Real-Time Communication',
+        subtitle: 'WeMeet - RTC web application',
+        slug: 'https://github.com/Source-Of-Code',
+        image: '/wemeet.png'
     }
+
 ]
 
 </script>
@@ -36,12 +37,13 @@ const projects = [
                     <h5 class="font-semibold text-lg text-gray-400">{{ project.subtitle }}</h5>
                     <h1 class="font-black text-5xl leading-tight text-gray-400 text-wrap mb-8">{{ project.title }}</h1>
 
-                    <button class="btn-primary">See this project</button>
+                    <a :href="project.slug" target="_blank" class="btn-primary">See this project</a>
                 </div>
             </div>
 
             <div class="flex-1 flex justify-center">
-                <NuxtImg format="webp" sizes="xs:100vw sm:100vw lg:600px" densities="x1" :placeholder="[600, 316, 75, 5]" class="shadow-2xl" :src="project.image" :alt="project.title" />
+                <NuxtImg format="webp" sizes="xs:100vw sm:100vw lg:600px" densities="x1"
+                    :placeholder="[600, 316, 75, 5]" class="shadow-2xl" :src="project.image" :alt="project.title" />
             </div>
 
         </div>
