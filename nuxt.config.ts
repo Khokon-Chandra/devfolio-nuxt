@@ -1,6 +1,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
+  nitro: {
+    compressPublicAssets: true
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
@@ -8,8 +11,27 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/content',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
+
+  robots: {
+    UserAgent: '*',
+    Disallow: ['/admin', '/login', '/api', '/private'],
+    Allow: '/',
+    Sitemap: 'https://khokon.vercel.app/sitemap.xml'
+  },
+  sitemap: {
+    hostname: 'https://khokon.vercel.app',
+    gzip: true,
+    routes: async () => {
+      return [
+        { url: '/', priority: 1.0 },
+        { url: '/blogs', priority: 0.8 },
+      ];
+    }
+  },
 
   colorMode: {
     classSuffix: '',

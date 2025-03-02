@@ -38,6 +38,27 @@ useHead({
       href: '/favicon_io/site.webmanifest'
     },
 
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Khokon Chandra",
+        "url": "https://khokon.vercel.app",
+        "sameAs": [
+          "https://www.linkedin.com/in/khokonchandra",
+          "https://github.com/Khokon-Chandra",
+          "https://x.com/KhokonChandra12"
+        ],
+        "jobTitle": "Senior Laravel & Vue Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance / Open Source"
+        }
+      })
+    }
   ]
 })
 
@@ -61,7 +82,7 @@ useSeoMeta({
     { name: 'linkedin:title', content: 'Khokon Chandra – Full Stack Web Developer & Problem Solve' },
     { name: 'linkedin:description', content: 'With expertise in PHP Laravel, AWS, Docker, and Vue.js, I build scalable web solutions tailored to modern needs. Discover more on my portfolio site.' },
     { name: 'linkedin:image', content: 'bannerimage' },
-    { name: 'linkedin:url', content: 'website-url' },
+    { name: 'linkedin:url', content: 'https://www.linkedin.com/in/khokonchandra/' },
   ],
 
 });
