@@ -35,7 +35,8 @@ const projects = [
             <div class="w-full lg:w-[40%] text-center lg:text-left">
                 <div class="max-w-md mx-auto ">
                     <h5 class="font-semibold text-lg text-gray-400">{{ project.subtitle }}</h5>
-                    <h1 class="font-black text-3xl sm:text-5xl leading-tight text-gray-400 text-wrap mb-8">{{ project.title }}</h1>
+                    <h1 class="font-black text-3xl sm:text-5xl leading-tight text-gray-400 text-wrap mb-8">{{
+                        project.title }}</h1>
 
                     <a :href="project.slug" target="_blank" class="btn-primary">See this project</a>
                 </div>
@@ -43,7 +44,8 @@ const projects = [
 
             <div class="flex-1 flex justify-center">
                 <NuxtImg format="webp" sizes="xs:100vw sm:100vw lg:600px" densities="x1"
-                    :placeholder="[600, 316, 75, 5]" class="shadow-2xl" :src="project.image" :alt="project.title" />
+                    :placeholder="[600, 316, 75, 5]" class="shadow-2xl" :src="project.image" :alt="project.title"
+                    loading="lazy" />
             </div>
 
         </div>
