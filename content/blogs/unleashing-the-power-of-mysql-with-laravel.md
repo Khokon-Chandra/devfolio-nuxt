@@ -3,7 +3,7 @@ title: "Unleashing the Power of MySQL with Laravel: A Beginner's Guide to Master
 description: "Unleashing the Power of MySQL with Laravel: A Beginner's Guide to Mastery"
 image:
   src: "/blogs/unleashing-the-power-of-mysql-with-laravel.jpg"
-  alt: "An image showcasing My Page."
+  alt: "An image showcasing mysql with laravel."
   width: 400
   height: 300
 head:

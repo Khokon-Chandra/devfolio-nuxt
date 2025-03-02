@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true
   },
+  build: {
+    terserOptions: { compress: { drop_console: true } },
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',

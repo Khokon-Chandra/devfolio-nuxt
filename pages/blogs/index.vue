@@ -16,7 +16,7 @@ const { data: posts } = await useAsyncData('blog-post-list', () => queryContent(
             <NuxtLink v-for="post in posts" :key="post" class="max-w-md space-y-2" :to="post._path">
                 <div class="w-full max-h-[270px] rounded-lg overflow-hidden">
                     <NuxtImg class="w-full h-auto" sizes="100vw sm:50vw md:384px" densities="x1" :src="post.image.src"
-                        :placeholder="[300, 300, 75, 5]" alt="Sunset in the mountains" />
+                        :placeholder="[300, 300, 75, 5]" :alt="post.image.alt" format="webp" loading="lazy" />
                 </div>
                 <div class="py-2">
                     <h1 class="font-bold text-2xl text-wrap text-gray-800 dark:text-gray-300">{{ post.title }}</h1>

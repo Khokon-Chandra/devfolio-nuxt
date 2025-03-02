@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /admin
-Disallow: /login
-Disallow: /dashboard
-Disallow: /api
-Disallow: /private
-Allow: /
-
-Sitemap: https://khokon.vercel.app/sitemap.xml
