@@ -1,15 +1,21 @@
 <script setup>
 
-const { data: posts } = await useAsyncData('blog-post-list', () => 
-  queryContent('/blogs')
-    .only(["_path", "title", "image", "published_at"]) // Include published_at for sorting
-    .sort({ published_at: -1 }) // Order by published_at descending (latest first)
-    .find()
+const { data: posts, pending } = await useAsyncData('blog-post-list', () =>
+    queryContent('/blogs')
+        .only(["_path", "title", "image", "published_at"]) // Include published_at for sorting
+        .sort({ published_at: -1 }) // Order by published_at descending (latest first)
+        .find()
 );
 
 </script>
 <template>
-    <section>
+    <div v-if="pending">
+        <SkeletonLoader />
+    </div>
+
+    <section else>
+
+
         <div class="text-center max-w-lg py-4 mb-4 mx-auto">
             <p class="text-semibold text-gray-800 dark:text-gray-300">Empowering Self-Taught Coders: Free Resources,
                 Full-Stack Insights, and Passionate Teaching for a Brighter Tech Future!</p>

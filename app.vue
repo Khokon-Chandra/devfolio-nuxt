@@ -90,6 +90,18 @@ useSeoMeta({
 </script>
 <template>
   <NuxtLayout name="default">
-    <NuxtPage />
+    <NuxtPage class="page-enter" />
   </NuxtLayout>
 </template>
+<style>
+/* Fade In-Out Transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+</style>
