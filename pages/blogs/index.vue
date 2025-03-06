@@ -1,6 +1,6 @@
 <script setup>
 
-const { data: posts, pending } = await useAsyncData('blog-post-list', () =>
+const { data: posts } = await useAsyncData('blog-post-list', () =>
     queryContent('/blogs')
         .only(["_path", "title", "image", "published_at"]) // Include published_at for sorting
         .sort({ published_at: -1 }) // Order by published_at descending (latest first)
@@ -9,11 +9,7 @@ const { data: posts, pending } = await useAsyncData('blog-post-list', () =>
 
 </script>
 <template>
-    <div v-if="pending">
-        <SkeletonLoader />
-    </div>
-
-    <section else>
+    <section>
 
 
         <div class="text-center max-w-lg py-4 mb-4 mx-auto">

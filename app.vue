@@ -1,5 +1,7 @@
 <script setup>
 
+const config = useRuntimeConfig();
+
 
 useHead({
   htmlAttrs: {
@@ -87,10 +89,11 @@ useSeoMeta({
 
 });
 
+
 </script>
 <template>
   <NuxtLayout name="default">
-    <NuxtPage class="page-enter" />
+    <NuxtPage class="page-enter" :key="config.public.version" />
   </NuxtLayout>
 </template>
 <style>

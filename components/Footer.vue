@@ -14,6 +14,10 @@
             <a class="cursor-pointer" target="_blank" href="https://x.com/KhokonChandra12">
                 <IconsTwitter class="size-8 text-gray-600 dark:text-gray-400" />
             </a>
+
+            <a class="cursor-pointer" target="_blank" href="https://leetcode.com/u/khokonchandra/">
+                <IconsLeetCode class="size-8 text-gray-600 dark:text-gray-400" />
+            </a>
         </div>
 
         <div class="p-4 dark:bg-gray-800/30">

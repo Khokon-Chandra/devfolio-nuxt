@@ -1,4 +1,10 @@
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      version: '1.0.1' // Change this manually on each release
+    }
+  },
+
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
   nitro: {
