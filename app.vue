@@ -90,9 +90,31 @@ useSeoMeta({
 });
 
 
+const router = useRouter();
+const isLoading = ref(true);
+
+watchEffect(() => {
+  isLoading.value = false;
+  router.beforeEach(() => {
+    isLoading.value = true;
+  });
+  router.afterEach(() => {
+    setTimeout(() => (isLoading.value = false), 500); // Simulate loading delay
+  });
+});
+
+
 </script>
 <template>
   <NuxtLayout name="default">
+    <div v-if="isLoading"
+      class="fixed inset-0 flex items-center justify-center bg-white dark:bg-gray-900 transition-all duration-500">
+      <div class="relative flex space-x-2">
+        <div class="w-4 h-4 bg-gray-800 dark:bg-gray-300 rounded-full animate-bounce [animation-delay:0.1s]"></div>
+        <div class="w-4 h-4 bg-gray-800 dark:bg-gray-300 rounded-full animate-bounce [animation-delay:0.2s]"></div>
+        <div class="w-4 h-4 bg-gray-800 dark:bg-gray-300 rounded-full animate-bounce [animation-delay:0.3s]"></div>
+      </div>
+    </div>
     <NuxtPage class="page-enter" :key="config.public.version" />
   </NuxtLayout>
 </template>
@@ -106,5 +128,25 @@ useSeoMeta({
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
+}
+
+
+@keyframes bounce {
+
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    opacity: 0.3;
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1.2s infinite ease-in-out;
 }
 </style>
