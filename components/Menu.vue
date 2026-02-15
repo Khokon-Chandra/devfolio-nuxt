@@ -46,17 +46,12 @@ const showToolTip = ref(false);
                     link.label }}</span>
         </NuxtLink>
 
-        <div class="relative">
-            <button @click="toggleDark" @mouseenter="showToolTip = true" @mouseleave="showToolTip = false"
-                class="px-3 py-2 border dark:bg-gray-800/30 border-gray-200 rounded-xl hover:bg-gray-200 duration-75 dark:border-gray-800 dark:hover:bg-gray-800">
-                <IconsSun v-show="isDark == false" class="text-xl text-gray-600 font-bold" />
-                <IconsMoon v-show="isDark" class="text-xl text-gray-300 font-bold" />
-            </button>
+        <button @click="toggleDark"
+            class="px-3 py-2 border dark:bg-gray-800/30 border-gray-200 rounded-xl hover:bg-gray-200 duration-75 dark:border-gray-800 dark:hover:bg-gray-800">
+            <IconsSun v-show="isDark == false" class="text-xl text-gray-600 font-bold" />
+            <IconsMoon v-show="isDark" class="text-xl text-gray-300 font-bold" />
+        </button>
 
-            <div v-if="showToolTip"
-                class="text-nowrap absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700">
-                Toggle dark mode
-            </div>
-        </div>
+
     </nav>
 </template>
