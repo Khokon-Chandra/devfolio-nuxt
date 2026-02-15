@@ -2,7 +2,7 @@
 title: "4-Week DSA Roadmap for PHP Developers"
 description: "A practical 4-week plan to build DSA skills before coding interviews, with problem lists and tips for PHP developers."
 image:
-  src: "blogs/4-week-dsa-mastering-for-php-develoepr.webp"
+  src: "/blogs/4-week-dsa-mastering-for-php-develoepr.webp"
   alt: "An image showcasing DSA problem solving guideline."
 head:
   meta:

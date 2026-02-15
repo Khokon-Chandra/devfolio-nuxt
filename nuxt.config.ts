@@ -77,6 +77,8 @@ export default defineNuxtConfig({
   },
 
   image: {
+    // Static preset = no server on Vercel; IPX would 404. Use 'none' so NuxtImg outputs plain img src.
+    provider: 'none',
     domains: ['avatars.githubusercontent.com'],
   },
 

@@ -2,7 +2,7 @@
 title: "Scaling Databases: Sharding, Replication, Master-Slave, and Slab Explained"
 description: "Scaling databases is both an art and a science. By mastering techniques like sharding, replication, master-slave architecture, and slab allocation, you can design systems that handle millions—even billions—of users with ease. Follow in the footsteps of Amazon, Netflix, and Uber to build infrastructure that scales with your ambition."
 image:
-  src: "blogs/scalling-databases.jpg"
+  src: "/blogs/scalling-databases.jpg"
   alt: "An image showcasing Scalling-database."
 head:
   meta:
