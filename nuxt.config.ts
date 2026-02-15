@@ -65,6 +65,10 @@ export default defineNuxtConfig({
     download: false
   },
 
+  image: {
+    domains: ['avatars.githubusercontent.com'],
+  },
+
   content: {
     highlight: {
       langs: [
