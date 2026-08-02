@@ -2,7 +2,7 @@
 title: " Ace PHP Interviews with Confidence: Your Ultimate Guide"
 description: 'Your ultimate guide to acing PHP interviews, mastering assessments, and coding "The Right Way" in PHP 8.4.'
 image:
-  src: "blogs/mastering-php-for-coding-interview.jpg"
+  src: "/blogs/mastering-php-for-coding-interview.jpg"
   alt: "An image showcasing Scalling-database."
 head:
   meta:

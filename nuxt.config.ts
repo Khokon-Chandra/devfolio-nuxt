@@ -7,11 +7,22 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
+
+  // Full static output: no server, CDN-only on Vercel (set Vercel output to .output/public if needed)
   nitro: {
+    preset: 'static',
     compressPublicAssets: true
   },
   build: {
     terserOptions: { compress: { drop_console: true } },
+  },
+  app: {
+    head: {
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
+      ]
+    }
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -60,9 +71,15 @@ export default defineNuxtConfig({
         ital: '200..700',
       },
       Roboto: true
-
     },
+    display: 'swap', // Show text immediately with fallback, then swap when font loads
     download: false
+  },
+
+  image: {
+    // Static preset = no server on Vercel; IPX would 404. Use 'none' so NuxtImg outputs plain img src.
+    provider: 'none',
+    domains: ['avatars.githubusercontent.com'],
   },
 
   content: {

@@ -92,15 +92,17 @@ useSeoMeta({
 
 const router = useRouter();
 const isLoading = ref(true);
+const isFirstLoad = ref(true);
 
-watchEffect(() => {
+// Only show loader on first load; hide as soon as page is ready (no artificial delay)
+onMounted(() => {
   isLoading.value = false;
-  router.beforeEach(() => {
-    isLoading.value = true;
-  });
-  router.afterEach(() => {
-    setTimeout(() => (isLoading.value = false), 500); // Simulate loading delay
-  });
+  isFirstLoad.value = false;
+});
+
+router.afterEach(() => {
+  if (isFirstLoad.value) return;
+  isLoading.value = false; // No delay: instant navigation feel
 });
 
 

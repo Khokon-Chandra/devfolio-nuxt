@@ -1,17 +1,10 @@
 <template>
     <div class="overflow-x-hidden">
-
         <Hero />
-
-        <Skill />
-
-        <Projects />
-
-        <Experience />
-
-        <About />
-
-        <Contact />
-
+        <LazySkill />
+        <LazyProjects />
+        <LazyExperience />
+        <LazyAbout />
+        <LazyContact />
     </div>
 </template>

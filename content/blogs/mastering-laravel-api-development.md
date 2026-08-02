@@ -2,7 +2,7 @@
 title: "Mastering Laravel API Development"
 description: "A Beginner’s Epic Journey into Unit Testing, Database Optimization, and Code Wizardry"
 image:
-  src: "blogs/mastering-laravel-api-development.jpg"
+  src: "/blogs/mastering-laravel-api-development.jpg"
   alt: "An image showcasing laravel api development."
 head:
   meta:

@@ -1,8 +1,8 @@
 ---
 title: "4-Week DSA Roadmap for PHP Developers"
-description: "4-Week DSA Roadmap for PHP Developers"
+description: "A practical 4-week plan to build DSA skills before coding interviews, with problem lists and tips for PHP developers."
 image:
-  src: "blogs/4-week-dsa-mastering-for-php-develoepr.webp"
+  src: "/blogs/4-week-dsa-mastering-for-php-develoepr.webp"
   alt: "An image showcasing DSA problem solving guideline."
 head:
   meta:
@@ -20,114 +20,119 @@ toc: "true"
 published_at: "06-March-2025 10:22 AM"
 ---
 
-
-
-
-## **🚀 4-Week DSA Roadmap for PHP Developers**
-⏳ **Duration:** 4 Weeks (~2-3 problems per day)  
-🛠️ **Goal:** Solve **50+ key DSA problems** before the coding test  
-💻 **Practice Platform:** [LeetCode](https://leetcode.com/), [GeeksForGeeks](https://www.geeksforgeeks.org/), [InterviewBit](https://www.interviewbit.com/)  
+If you're a PHP developer prepping for a coding round, brushing up on data structures and algorithms in a short window is doable. This roadmap assumes you can do about 2–3 problems per day and targets 50+ core problems across arrays, linked lists, trees, graphs, and dynamic programming. Use LeetCode, GeeksForGeeks, or InterviewBit—pick one and stick with it so your progress stays in one place.
 
 ---
 
-## **📅 Week 1: Mastering Arrays & Hashing**
-**Focus:** Arrays, Hashing, Two Pointers, Sliding Window  
-🔥 **Key Concepts:** Sorting, Frequency counting, Prefix sum, Kadane’s algorithm  
+## Week 1: Arrays and Hashing
 
-### **📝 Day 1-2: Basic Array Operations & Two Pointers**
-1. [Two Sum](https://leetcode.com/problems/two-sum/) 🟢  
-2. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) 🟢  
-3. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) 🟢  
-4. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) 🟢  
+Start with arrays and hashing. You'll use sorting, frequency counting, prefix sums, and Kadane's algorithm. PHP's array functions will help, but try to implement logic yourself first.
 
-### **📝 Day 3-4: Sliding Window & Prefix Sum**
-5. [Maximum Subarray (Kadane’s Algorithm)](https://leetcode.com/problems/maximum-subarray/) 🔵  
-6. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) 🔵  
-7. [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) 🔴  
+**Day 1–2: Basic arrays and two pointers**
 
-### **📝 Day 5-7: HashMaps & Sorting**
-8. [Group Anagrams](https://leetcode.com/problems/group-anagrams/) 🔵  
-9. [Valid Anagram](https://leetcode.com/problems/valid-anagram/) 🟢  
-10. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) 🔵  
+- [Two Sum](https://leetcode.com/problems/two-sum/) (Easy)
+- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (Easy)
+- [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (Easy)
+- [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (Easy)
 
----
+**Day 3–4: Sliding window and prefix sum**
 
-## **📅 Week 2: Linked List, Stack & Queues**
-**Focus:** Linked Lists, Stack & Queue operations  
-🔥 **Key Concepts:** Fast & slow pointers, LRU cache, Parentheses validation  
+- [Maximum Subarray (Kadane's Algorithm)](https://leetcode.com/problems/maximum-subarray/) (Medium)
+- [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Medium)
+- [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) (Hard)
 
-### **📝 Day 8-9: Linked List Basics**
-11. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) 🟢  
-12. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) 🟢  
+**Day 5–7: Hash maps and sorting**
 
-### **📝 Day 10-11: Fast & Slow Pointers**
-13. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) 🔵  
-14. [Find the Middle of Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) 🟢  
-15. [Remove Nth Node from End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) 🔵  
-
-### **📝 Day 12-13: Stacks & Queues**
-16. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) 🟢  
-17. [Next Greater Element](https://leetcode.com/problems/next-greater-element-i/) 🔵  
-18. [Implement Queue using Stack](https://leetcode.com/problems/implement-queue-using-stacks/) 🔵  
-
-### **📝 Day 14: Advanced Stack Problem**
-19. [LRU Cache](https://leetcode.com/problems/lru-cache/) 🔴  
+- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) (Medium)
+- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) (Easy)
+- [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) (Medium)
 
 ---
 
-## **📅 Week 3: Trees & Graphs**
-**Focus:** Binary Trees, Graphs (DFS & BFS), Shortest Paths  
-🔥 **Key Concepts:** Recursion, BFS/DFS, Binary Search Tree (BST), Dijkstra’s Algorithm  
+## Week 2: Linked Lists, Stacks and Queues
 
-### **📝 Day 15-16: Tree Traversals**
-20. [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) 🟢  
-21. [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) 🟢  
+PHP doesn't have a built-in linked list, so implement a simple Node class and practice pointer-style logic. Stacks and queues will feel familiar if you've used `array_push`/`array_pop`; the goal here is to see how they solve specific problems.
 
-### **📝 Day 17-18: Binary Search Tree (BST)**
-22. [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) 🔵  
-23. [Diameter of a Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) 🔵  
+**Day 8–9: Linked list basics**
 
-### **📝 Day 19-20: Graphs (DFS & BFS)**
-24. [Number of Islands](https://leetcode.com/problems/number-of-islands/) 🔵  
-25. [Detect Cycle in Directed Graph](https://www.geeksforgeeks.org/detect-cycle-in-a-directed-graph-using-bfs/) 🔵  
+- [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) (Easy)
+- [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) (Easy)
 
-### **📝 Day 21: Advanced Graphs**
-26. [Dijkstra’s Algorithm (Shortest Path)](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-set-in-stl/) 🔴  
-27. [Topological Sorting](https://www.geeksforgeeks.org/topological-sorting/) 🔴  
+**Day 10–11: Fast and slow pointers**
 
----
+- [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) (Medium)
+- [Find the Middle of Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) (Easy)
+- [Remove Nth Node from End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) (Medium)
 
-## **📅 Week 4: Dynamic Programming & Recursion**
-**Focus:** Recursion, Backtracking, DP problems  
-🔥 **Key Concepts:** Fibonacci DP, LCS, Knapsack  
+**Day 12–13: Stacks and queues**
 
-### **📝 Day 22-23: Recursion & Backtracking**
-28. [Subsets](https://leetcode.com/problems/subsets/) 🔵  
-29. [Word Search](https://leetcode.com/problems/word-search/) 🔵  
+- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (Easy)
+- [Next Greater Element](https://leetcode.com/problems/next-greater-element-i/) (Medium)
+- [Implement Queue using Stack](https://leetcode.com/problems/implement-queue-using-stacks/) (Medium)
 
-### **📝 Day 24-25: Dynamic Programming Basics**
-30. [Climbing Stairs (Fibonacci-based DP)](https://leetcode.com/problems/climbing-stairs/) 🟢  
-31. [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) 🔵  
+**Day 14: One harder stack problem**
 
-### **📝 Day 26-27: Advanced DP**
-32. [Coin Change](https://leetcode.com/problems/coin-change/) 🔵  
-33. [0/1 Knapsack Problem](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/) 🔵  
-
-### **📝 Day 28: Final Challenge (Hard DP)**
-34. [N-Queens](https://leetcode.com/problems/n-queens/) 🔴  
+- [LRU Cache](https://leetcode.com/problems/lru-cache/) (Hard)
 
 ---
 
-## **🚀 Final Week: Mock Tests & Practice**
-- **Solve random problems from LeetCode Medium/Hard**
-- **Try PHP-based implementations for some problems**
-- **Take a full-length timed test** (e.g., 90 minutes, 2-3 problems)
+## Week 3: Trees and Graphs
+
+Trees and graphs show up often in interviews. Get comfortable with recursion, then BFS and DFS. PHP's recursion limit can bite you on deep trees, so prefer iterative solutions when the problem allows.
+
+**Day 15–16: Tree traversals**
+
+- [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) (Easy)
+- [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) (Easy)
+
+**Day 17–18: Binary search trees**
+
+- [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) (Medium)
+- [Diameter of a Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) (Medium)
+
+**Day 19–20: Graphs (DFS and BFS)**
+
+- [Number of Islands](https://leetcode.com/problems/number-of-islands/) (Medium)
+- [Detect Cycle in Directed Graph](https://www.geeksforgeeks.org/detect-cycle-in-a-directed-graph-using-bfs/) (Medium)
+
+**Day 21: Shortest path and ordering**
+
+- [Dijkstra's Algorithm (Shortest Path)](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-set-in-stl/) (Hard)
+- [Topological Sorting](https://www.geeksforgeeks.org/topological-sorting/) (Hard)
 
 ---
 
-## **💡 Pro Tips for PHP Developers**
-✅ **Use PHP’s built-in functions** for arrays (`array_map()`, `array_filter()`)  
-✅ **Use associative arrays (hashmaps) efficiently**  
-✅ **Write clean OOP-based PHP solutions**  
-✅ **Test solutions with edge cases** (empty input, large numbers, negative values)  
+## Week 4: Dynamic Programming and Recursion
 
+DP is usually the trickiest part. Start with recursion and memoization, then move to classic problems like Fibonacci-style, LCS, and knapsack. Don't rush—understanding one pattern helps with the next.
+
+**Day 22–23: Recursion and backtracking**
+
+- [Subsets](https://leetcode.com/problems/subsets/) (Medium)
+- [Word Search](https://leetcode.com/problems/word-search/) (Medium)
+
+**Day 24–25: Basic DP**
+
+- [Climbing Stairs (Fibonacci-based DP)](https://leetcode.com/problems/climbing-stairs/) (Easy)
+- [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) (Medium)
+
+**Day 26–27: More DP**
+
+- [Coin Change](https://leetcode.com/problems/coin-change/) (Medium)
+- [0/1 Knapsack Problem](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/) (Medium)
+
+**Day 28: One hard DP-style problem**
+
+- [N-Queens](https://leetcode.com/problems/n-queens/) (Hard)
+
+---
+
+## After the 4 weeks
+
+Spend the following days on mixed practice: pick random Medium and Hard problems, implement a few in PHP to get used to the language in an interview setting, and do at least one full-length timed run (e.g. 90 minutes, 2–3 problems) to simulate the real test.
+
+---
+
+## Tips that helped me as a PHP dev
+
+Use PHP's array functions where they fit—`array_map`, `array_filter`, and associative arrays for hashmaps—but avoid relying on them to hide the algorithm. Write clear, step-by-step logic so you can explain it in an interview. Prefer a small OOP layer (e.g. a Node class for linked lists) over one big procedural script. Always test with edge cases: empty input, single element, large n, and negative numbers. If a problem feels impossible, look at the solution only after trying for 20–30 minutes, then implement it yourself the next day without peeking.

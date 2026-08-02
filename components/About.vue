@@ -2,8 +2,16 @@
     <section id="About" class="py-24">
         <div
             class="main-container flex flex-col lg:flex-row justify-center lg:justify-end items-center lg:items-center h-full w-full">
-            <div class="flex-1 text-center">
-                <IconsHello class="w-full" />
+            <div class="flex-1 flex justify-center">
+                <NuxtImg
+                    src="https://avatars.githubusercontent.com/u/58368293?v=4"
+                    alt="Khokon Chandra - Full Stack Developer"
+                    width="320"
+                    height="320"
+                    class="w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover ring-4 ring-gray-200 dark:ring-gray-700 shadow-xl"
+                    format="webp"
+                    loading="lazy"
+                />
             </div>
             <div class="w-full lg:w-[40%] text-center lg:text-left">
                 <h1
