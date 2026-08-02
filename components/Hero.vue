@@ -29,20 +29,20 @@ const scroll = useScrollStore();
                 In Touch</button>
 
             <div class="flex items-center gap-8">
-                <a class="cursor-pointer" target="_blank" href="https://github.com/Khokon-Chandra">
-                    <IconsGithub class="size-8 text-gray-600 dark:text-gray-400" />
+                <a class="social-icon" target="_blank" rel="noopener noreferrer" href="https://github.com/Khokon-Chandra" aria-label="GitHub">
+                    <IconsGithub class="size-8" />
                 </a>
 
-                <a class="cursor-pointer" target="_blank" href="https://linkedin.com/in/khokonchandra">
-                    <IconsLinkedin class="size-8 text-gray-600 dark:text-gray-400" />
+                <a class="social-icon" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/khokonchandra" aria-label="LinkedIn">
+                    <IconsLinkedin class="size-8" />
                 </a>
 
-                <a class="cursor-pointer" target="_blank" href="https://x.com/KhokonChandra12">
-                    <IconsTwitter class="size-8 text-gray-600 dark:text-gray-400" />
+                <a class="social-icon" target="_blank" rel="noopener noreferrer" href="https://x.com/KhokonChandra12" aria-label="Twitter">
+                    <IconsTwitter class="size-8" />
                 </a>
 
-                <a class="cursor-pointer" target="_blank" href="https://leetcode.com/u/khokonchandra/">
-                    <IconsLeetCode class="size-8 text-gray-600 dark:text-gray-400" />
+                <a class="social-icon" target="_blank" rel="noopener noreferrer" href="https://leetcode.com/u/khokonchandra/" aria-label="LeetCode">
+                    <IconsLeetCode class="size-8" />
                 </a>
 
             </div>

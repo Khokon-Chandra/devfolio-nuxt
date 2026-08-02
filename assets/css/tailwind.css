@@ -5,6 +5,7 @@
 @layer base {
   html {
     font-family: "Nunito Sans", sans-serif, system-ui;
+    scroll-behavior: smooth;
   }
 }
 
@@ -17,5 +18,9 @@ body {
 }
 
 .btn-primary {
-  @apply text-sm font-bold px-6 py-2 text-red-500 rounded-full outline-none border border-red-500 ring-offset-transparent hover:bg-red-500 hover:text-white focus:ring-red-300 focus:outline-none duration-75;
+  @apply text-sm font-bold px-6 py-2 text-red-500 rounded-full outline-none border border-red-500 ring-offset-transparent hover:bg-red-500 hover:text-white focus:ring-red-300 focus:outline-none duration-75 dark:text-red-400 dark:border-red-400 dark:hover:bg-red-500 dark:hover:text-white;
+}
+
+.social-icon {
+  @apply text-gray-600 transition-all duration-200 hover:scale-110 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400;
 }
