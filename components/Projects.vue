@@ -20,6 +20,20 @@ const projects = [
         subtitle: 'WeMeet - RTC web application',
         slug: 'https://github.com/Source-Of-Code',
         image: '/wemeet.png'
+    },
+
+    {
+        title: 'Nexus Cinematic Scroll',
+        subtitle: 'Scroll-driven cinematic marketing platform',
+        slug: 'https://cinematic-scroll-demo-dun.vercel.app',
+        image: '/cinematic-scroll.png'
+    },
+
+    {
+        title: 'Flux Motion Studio',
+        subtitle: 'Motion graphics and video experience landing page',
+        slug: 'https://flux-motion-studio.vercel.app',
+        image: '/flux-motion.png'
     }
 
 ]
