@@ -5,6 +5,7 @@
 <template>
     <div>
         <Header />
+        <Sidebar />
         <slot />
         <Footer />
     </div>
