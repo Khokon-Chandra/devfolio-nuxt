@@ -1,21 +1,44 @@
 export default defineNuxtConfig({
   runtimeConfig: {
+    /**
+     * Server-only. Set these in Vercel → Settings → Environment Variables.
+     * Nuxt maps NUXT_RESEND_API_KEY → runtimeConfig.resendApiKey automatically.
+     */
+    resendApiKey: '',
+    contactTo: 'khokonchandra4@gmail.com',
+    contactFrom: 'Portfolio <onboarding@resend.dev>',
+
     public: {
-      version: '1.0.1' // Change this manually on each release
+      version: '1.1.0' // Change this manually on each release
     }
   },
 
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
 
-  // Full static output: no server, CDN-only on Vercel (set Vercel output to .output/public if needed)
+  /**
+   * Vercel preset: static pages are prerendered to the CDN, while /api/*
+   * runs as a serverless function so the contact form can send email.
+   */
   nitro: {
-    preset: 'static',
-    compressPublicAssets: true
+    preset: 'vercel',
+    compressPublicAssets: true,
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/blogs', '/sitemap.xml']
+    }
   },
+
+  routeRules: {
+    '/': { prerender: true },
+    '/blogs/**': { prerender: true },
+    '/api/**': { prerender: false }
+  },
+
   build: {
     terserOptions: { compress: { drop_console: true } },
   },
+
   app: {
     head: {
       link: [
@@ -24,6 +47,7 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
@@ -36,21 +60,22 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap'
   ],
 
-  robots: {
-    UserAgent: '*',
-    Disallow: ['/admin', '/login', '/api', '/private'],
-    Allow: '/',
-    Sitemap: 'https://khokon.vercel.app/sitemap.xml'
+  // Shared site config consumed by @nuxtjs/sitemap and @nuxtjs/robots (v5+).
+  site: {
+    url: 'https://khokon.vercel.app',
+    name: 'Khokon Chandra — Full-Stack Laravel & Nuxt Developer'
   },
+
+  robots: {
+    disallow: ['/admin', '/login', '/dashboard', '/api', '/private']
+  },
+
   sitemap: {
-    hostname: 'https://khokon.vercel.app',
-    gzip: true,
-    routes: async () => {
-      return [
-        { url: '/', priority: 1.0 },
-        { url: '/blogs', priority: 0.8 },
-      ];
-    }
+    defaults: { changefreq: 'weekly', priority: 0.7 },
+    urls: [
+      { loc: '/', priority: 1.0, changefreq: 'weekly' },
+      { loc: '/blogs', priority: 0.8, changefreq: 'weekly' }
+    ]
   },
 
   colorMode: {
@@ -62,7 +87,6 @@ export default defineNuxtConfig({
     configPath: 'tailwind.config.js',
     editorSupport: true
   },
-
 
   googleFonts: {
     families: {
@@ -77,7 +101,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    // Static preset = no server on Vercel; IPX would 404. Use 'none' so NuxtImg outputs plain img src.
+    // Provider 'none' emits plain <img src>, which avoids IPX 404s on Vercel.
     provider: 'none',
     domains: ['avatars.githubusercontent.com'],
   },

@@ -1,57 +1,51 @@
 <script lang="ts" setup>
-const scroll = useScrollStore();
+import { platforms } from '~/data/profile'
 
-const links = ref([
-    {
-        label: "Home",
-        to: "/",
-    },
+const links = [
+    { label: 'Services', to: '/#Services' },
+    { label: 'Work', to: '/#Portfolio' },
+    { label: 'Experience', to: '/#Experience' },
+    { label: 'Blog', to: '/blogs' },
+    { label: 'Contact', to: '/#Contact' },
+]
 
-    {
-        label: "Blog",
-        to: "/blogs",
-    },
+const fiverr = platforms.find(p => p.key === 'fiverr')!
 
-    {
-        label: "Portfolio",
-        to: "/#Portfolio",
-    },
+const sidebarStore = useSidebarStore()
+const colorMode = useColorMode()
 
-    {
-        label: "Contact",
-        to: "/#Contact",
-    },
-]);
-
-const sidebarStore = useSidebarStore();
-
-const colorMode = useColorMode();
-
+const isDark = computed(() => colorMode.value === 'dark')
 const toggleDark = () => {
-    colorMode.preference = colorMode.value == "dark" ? "light" : "dark";
-};
-
-const isDark = computed(() => colorMode.value == "dark");
-
-const showToolTip = ref(false);
+    colorMode.preference = isDark.value ? 'light' : 'dark'
+}
 </script>
+
 <template>
-    <nav class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-12">
-        <NuxtLink v-for="link in links" :key="link.label" :to="link.to" @click="
-            sidebarStore.closeSidebar();
-        scroll.scrollToSection(link.label);
-        ">
-            <span
-                class="text-sm font-bold text-gray-600 dark:text-gray-400 py-1 hover:border-b-2 hover:border-b-gray-500 duration-50">{{
-                    link.label }}</span>
-        </NuxtLink>
+    <nav class="flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-8">
+        <ul class="flex flex-col items-start gap-5 md:flex-row md:items-center md:gap-7">
+            <li v-for="link in links" :key="link.label">
+                <NuxtLink :to="link.to" @click="sidebarStore.closeSidebar()"
+                    class="relative text-base font-bold text-gray-600 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 md:text-sm
+                           after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-red-500
+                           after:transition-all after:duration-200 hover:after:w-full">
+                    {{ link.label }}
+                </NuxtLink>
+            </li>
+        </ul>
 
-        <button @click="toggleDark"
-            class="px-3 py-2 border dark:bg-gray-800/30 border-gray-200 rounded-xl hover:bg-gray-200 duration-75 dark:border-gray-800 dark:hover:bg-gray-800">
-            <IconsSun v-show="isDark == false" class="text-xl text-gray-600 font-bold" />
-            <IconsMoon v-show="isDark" class="text-xl text-gray-300 font-bold" />
-        </button>
+        <div class="flex items-center gap-3">
+            <a :href="fiverr.url" target="_blank" rel="noopener noreferrer"
+                class="btn-fiverr !px-4 !py-2 !text-xs" @click="sidebarStore.closeSidebar()">
+                <IconsFiverr inverted class="size-4" />
+                Hire on Fiverr
+            </a>
 
-
+            <button type="button" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+                class="rounded-xl border border-gray-200 p-2.5 transition hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-800/30 dark:hover:bg-gray-800"
+                @click="toggleDark">
+                <IconsSun v-show="!isDark" class="text-lg text-gray-600" />
+                <IconsMoon v-show="isDark" class="text-lg text-gray-300" />
+            </button>
+        </div>
     </nav>
 </template>

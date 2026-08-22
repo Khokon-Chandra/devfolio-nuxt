@@ -1,9 +1,12 @@
 <template>
     <div class="overflow-x-hidden">
         <Hero />
-        <LazySkill />
+        <LazyServices />
+        <LazyGigs />
         <LazyProjects />
+        <LazySkill />
         <LazyExperience />
+        <LazyProcess />
         <LazyAbout />
         <LazyContact />
     </div>

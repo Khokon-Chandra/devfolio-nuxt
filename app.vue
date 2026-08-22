@@ -1,154 +1,130 @@
 <script setup>
+import { profile, platforms, socials } from '~/data/profile'
 
-const config = useRuntimeConfig();
+const config = useRuntimeConfig()
 
+const ogImage = `${profile.site}/hero.png`
 
 useHead({
-  htmlAttrs: {
-    lang: 'en'
-  },
+  htmlAttrs: { lang: 'en' },
   link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon_io/favicon.ico'
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      href: '/favicon_io/favicon-32x32.png'
-    },
-
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      href: '/favicon_io/favicon-16x16.png'
-    },
-
-    {
-      rel: 'apple-touch-icon',
-      type: 'image/png',
-      sizes: '180x180',
-      href: '/favicon_io/apple-touch-icon.png'
-    },
-
-    {
-      rel: 'manifest',
-      type: 'webmanifest',
-      href: '/favicon_io/site.webmanifest'
-    },
-
+    { rel: 'canonical', href: `${profile.site}/` },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon_io/favicon.ico' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon_io/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon_io/favicon-16x16.png' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon_io/apple-touch-icon.png' },
+    { rel: 'manifest', href: '/favicon_io/site.webmanifest' },
   ],
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Khokon Chandra",
-        "url": "https://khokon.vercel.app",
-        "sameAs": [
-          "https://www.linkedin.com/in/khokonchandra",
-          "https://github.com/Khokon-Chandra",
-          "https://x.com/KhokonChandra12"
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: profile.name,
+        url: profile.site,
+        image: profile.avatar,
+        email: `mailto:${profile.email}`,
+        telephone: profile.phone,
+        jobTitle: profile.role,
+        description: profile.summary,
+        // Every profile that proves this is the same person.
+        sameAs: [
+          ...socials.map(s => s.url),
+          ...platforms.map(p => p.url),
         ],
-        "jobTitle": "Senior Laravel & Vue Developer",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Freelance / Open Source"
-        }
-      })
-    }
-  ]
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Dhaka',
+          addressCountry: 'BD',
+        },
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Körbler GmbH',
+          url: 'https://www.1tool.com',
+        },
+        alumniOf: {
+          '@type': 'EducationalOrganization',
+          name: 'RPI Rangpur, Bangladesh',
+        },
+        knowsAbout: [
+          'Laravel', 'PHP', 'Vue.js', 'Nuxt.js', 'TypeScript', 'MySQL',
+          'REST API development', 'Redis', 'Docker', 'Tailwind CSS',
+        ],
+        knowsLanguage: ['English', 'Bengali'],
+      }),
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ProfessionalService',
+        name: `${profile.name} — Freelance Web Development`,
+        url: `${profile.site}/#Hire`,
+        image: profile.avatar,
+        description:
+          'Freelance Laravel, PHP, Vue 3 and Nuxt 3 development — REST APIs, multi-tenant applications, database performance work and CI/CD setup.',
+        provider: { '@type': 'Person', name: profile.name, url: profile.site },
+        areaServed: 'Worldwide',
+        availableChannel: platforms.map(p => ({
+          '@type': 'ServiceChannel',
+          name: p.name,
+          serviceUrl: p.url,
+        })),
+      }),
+    },
+  ],
 })
 
+/**
+ * Flat keys — useSeoMeta expects them at the top level, not nested in a
+ * `meta` array (that shape is silently dropped).
+ */
 useSeoMeta({
-  title: 'Khokon Chandra | Full-Stack Laravel Developer | PHP, Vue.js, Nuxt.js Expert',
-  meta: [
-    { name: "author", content: "Khokon Chandra" },
-    { name: 'description', content: 'Portfolio of Khokon Chandra, a skilled Laravel and Nuxt.js developer. Expertise in PHP, MySQL, Vue.js, Tailwind CSS, and JavaScript for building scalable web applications.' },
-    { name: 'keywords', content: 'Full-stack web developer, Backend Developer, Laravel developer, Laravel, PHP, MySQL, Vue.js, Nuxt.js, Tailwind CSS, JavaScript' },
-    { property: 'og:title', content: 'Khokon Chandra | Laravel and Full-Stack Developer' },
-    { property: 'og:description', content: 'Explore the portfolio of Khokon Chandra, showcasing innovative solutions and expertise in full-stack development with Laravel, PHP, and Vue.js.' },
-    { property: 'og:url', content: 'https://khokon.vercel.app/' },
-    { property: 'og:image', content: 'https://khokon.vercel.app/hero.png' },
+  title: 'Khokon Chandra | Full-Stack Laravel & Nuxt Developer for Hire',
+  description:
+    'Freelance full-stack developer with 4+ years building Laravel, PHP, Vue 3 and Nuxt 3 applications. Available for REST API, CRM and performance work — hire me on Fiverr, Upwork or Freelancer.',
+  author: profile.name,
+  keywords:
+    'Laravel developer for hire, freelance PHP developer, Vue.js developer, Nuxt.js developer, REST API development, MySQL optimization, full-stack developer Bangladesh, Fiverr Laravel developer',
 
-    { name: 'twitter:title', content: 'Khokon Chandra – Full Stack Web Developer' },
-    { name: 'twitter:description', content: 'Expert in PHP, Laravel, MySQL, API development, Vue.js, and scalable web solutions. Check out my portfolio for modern, high-performance applications.' },
-    { name: 'twitter:image', content: 'twitter title goes here' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:site', content: "@khokonchandra12" },
+  ogType: 'website',
+  ogSiteName: `${profile.name} — Full-Stack Developer`,
+  ogTitle: 'Khokon Chandra | Full-Stack Laravel & Nuxt Developer for Hire',
+  ogDescription:
+    'Laravel, PHP, Vue 3 and Nuxt 3 developer with 4+ years of experience. Available for freelance and contract work.',
+  ogUrl: `${profile.site}/`,
+  ogImage: ogImage,
+  ogImageAlt: `${profile.name} — Full-Stack Developer`,
+  ogLocale: 'en_US',
 
-    { name: 'linkedin:title', content: 'Khokon Chandra – Full Stack Web Developer & Problem Solve' },
-    { name: 'linkedin:description', content: 'With expertise in PHP Laravel, AWS, Docker, and Vue.js, I build scalable web solutions tailored to modern needs. Discover more on my portfolio site.' },
-    { name: 'linkedin:image', content: 'bannerimage' },
-    { name: 'linkedin:url', content: 'https://www.linkedin.com/in/khokonchandra/' },
-  ],
+  twitterCard: 'summary_large_image',
+  twitterSite: '@khokonchandra12',
+  twitterCreator: '@khokonchandra12',
+  twitterTitle: 'Khokon Chandra — Full-Stack Laravel & Nuxt Developer',
+  twitterDescription:
+    'Expert in PHP, Laravel, MySQL, REST APIs and Vue/Nuxt. Available for freelance projects.',
+  twitterImage: ogImage,
 
-});
-
-
-const router = useRouter();
-const isLoading = ref(true);
-const isFirstLoad = ref(true);
-
-// Only show loader on first load; hide as soon as page is ready (no artificial delay)
-onMounted(() => {
-  isLoading.value = false;
-  isFirstLoad.value = false;
-});
-
-router.afterEach(() => {
-  if (isFirstLoad.value) return;
-  isLoading.value = false; // No delay: instant navigation feel
-});
-
-
+  themeColor: '#ef4444',
+})
 </script>
+
 <template>
   <NuxtLayout name="default">
-    <div v-if="isLoading"
-      class="fixed inset-0 flex items-center justify-center bg-white dark:bg-gray-900 transition-all duration-500">
-      <div class="relative flex space-x-2">
-        <div class="w-4 h-4 bg-gray-800 dark:bg-gray-300 rounded-full animate-bounce [animation-delay:0.1s]"></div>
-        <div class="w-4 h-4 bg-gray-800 dark:bg-gray-300 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-        <div class="w-4 h-4 bg-gray-800 dark:bg-gray-300 rounded-full animate-bounce [animation-delay:0.3s]"></div>
-      </div>
-    </div>
     <NuxtPage class="page-enter" :key="config.public.version" />
   </NuxtLayout>
 </template>
+
 <style>
 /* Fade In-Out Transition */
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-}
-
-
-@keyframes bounce {
-
-  0%,
-  80%,
-  100% {
-    transform: scale(0);
-    opacity: 0.3;
-  }
-
-  40% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.animate-bounce {
-  animation: bounce 1.2s infinite ease-in-out;
 }
 </style>

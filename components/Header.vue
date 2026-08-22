@@ -1,31 +1,31 @@
 <script lang="ts" setup>
+const sidebarStore = useSidebarStore()
+const { y } = useWindowScroll()
 
-const sidebarStore = useSidebarStore();
-
+const isScrolled = computed(() => y.value > 12)
 </script>
 
 <template>
-
     <div>
-
-        <header>
-            <div class="main-container flex flex-wrap items-center justify-between py-2">
-                <NuxtLink to="/">
-                    <Logo></Logo>
+        <header class="sticky top-0 z-40 transition duration-200"
+            :class="isScrolled
+                ? 'border-b border-gray-200/70 bg-white/80 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/80'
+                : 'border-b border-transparent'">
+            <div class="main-container flex items-center justify-between py-2">
+                <NuxtLink to="/" aria-label="Home">
+                    <Logo />
                 </NuxtLink>
 
                 <Menu class="hidden md:flex" />
 
-                <div class="flex md:hidden">
+                <button type="button" class="flex md:hidden" aria-label="Open menu"
+                    @click="sidebarStore.toggleSidebar()">
                     <IconsBars
-                        @click="sidebarStore.toggleSidebar()"
-                        class="cursor-pointer size-8 text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 duration-100" />
-                </div>
+                        class="size-8 cursor-pointer text-gray-500 transition hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200" />
+                </button>
             </div>
-            <Sidebar class="inline-block md:hidden" />
         </header>
 
-
+        <Sidebar class="inline-block md:hidden" />
     </div>
-
 </template>
