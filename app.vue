@@ -25,7 +25,6 @@ useHead({
         url: profile.site,
         image: profile.avatar,
         email: `mailto:${profile.email}`,
-        telephone: profile.phone,
         jobTitle: `Remote ${profile.role}`,
         description: profile.summary,
         // Every profile that proves this is the same person.

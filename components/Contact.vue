@@ -28,10 +28,9 @@ const mailto = computed(() => {
 const { copy, copied, isSupported } = useClipboard({ source: profile.email, copiedDuring: 2000 })
 
 const channels = [
-    { icon: 'clock', label: 'Replies within', value: '24 hours' },
-    { icon: 'location', label: 'Time zone', value: `Dhaka · ${profile.timezone}` },
-    { icon: 'clock', label: 'Overlap', value: '4–6 h CET · 3+ h EST' },
-    { icon: 'phone', label: 'Phone', value: profile.phone, href: `tel:${profile.phoneHref}` },
+    { label: 'Replies within', value: '24 hours' },
+    { label: 'Time zone', value: `Dhaka · ${profile.timezone}` },
+    { label: 'Overlap', value: '4–6 h CET · 3+ h EST' },
 ]
 </script>
 
@@ -68,17 +67,14 @@ const channels = [
                 </div>
 
                 <!-- facts rail -->
-                <dl class="grid grid-cols-2 gap-px border-t border-gray-200 bg-gray-200 dark:border-gray-800 dark:bg-gray-800 lg:grid-cols-4">
+                <dl class="grid grid-cols-1 gap-px border-t border-gray-200 bg-gray-200 dark:border-gray-800 dark:bg-gray-800 sm:grid-cols-3">
                     <div v-for="channel in channels" :key="channel.label"
                         class="bg-white px-5 py-5 text-center dark:bg-gray-900/60">
                         <dt class="text-[11px] font-bold uppercase tracking-wider text-gray-400">
                             {{ channel.label }}
                         </dt>
                         <dd class="mt-1 text-sm font-bold text-gray-700 dark:text-gray-200">
-                            <a v-if="channel.href" :href="channel.href" class="transition hover:text-red-500">
-                                {{ channel.value }}
-                            </a>
-                            <span v-else>{{ channel.value }}</span>
+                            {{ channel.value }}
                         </dd>
                     </div>
                 </dl>

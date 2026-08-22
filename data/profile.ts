@@ -9,8 +9,6 @@ export const profile = {
   role: 'Full-Stack Developer',
   headline: 'Laravel · Vue 3 · Nuxt 3 · TypeScript',
   email: 'khokonchandra4@gmail.com',
-  phone: '+880 1999 835 836',
-  phoneHref: '+8801999835836',
   location: 'Dhaka, Bangladesh',
   timezone: 'UTC+6',
   overlap: '4–6 h daily overlap with CET / 3+ h with EST',
