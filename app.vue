@@ -3,7 +3,10 @@ import { profile, platforms, socials } from '~/data/profile'
 
 const config = useRuntimeConfig()
 
-const ogImage = `${profile.site}/hero.png`
+// 1200x630 social card. Anything smaller than ~1200x630 gets downgraded to a
+// small square thumbnail by LinkedIn/Facebook/WhatsApp, which reads as "it is
+// showing my logo". Regenerate with the recipe in README.
+const ogImage = `${profile.site}/og-image.jpg`
 
 useHead({
   htmlAttrs: { lang: 'en' },
@@ -88,8 +91,11 @@ useSeoMeta({
   ogDescription:
     'Remote Laravel, PHP, Vue 3 and Nuxt 3 developer with 4+ years of experience. Available for freelance and contract work.',
   ogUrl: `${profile.site}/`,
+  // Site-wide default only. Dimension/secure_url tags live on the homepage
+  // (pages/index.vue) — blog posts override og:image with their own artwork,
+  // and would otherwise inherit this card's URL and 1200x630 dimensions.
   ogImage: ogImage,
-  ogImageAlt: `${profile.name} — Full-Stack Developer`,
+  ogImageAlt: `${profile.name} — Remote Full-Stack Developer`,
   ogLocale: 'en_US',
 
   twitterCard: 'summary_large_image',

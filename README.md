@@ -99,6 +99,26 @@ contact form still works.
 > detects on its own.
 
 
+## Social share card
+
+`public/og-image.jpg` (1200x630) is what LinkedIn, X, Facebook and WhatsApp show
+when the site is shared. Its source is `tools/og-card.html`, which composites
+`public/hero.png` onto a branded background; the regeneration command is in a
+comment at the top of that file.
+
+**Keep it 1200x630.** Below roughly that size the platforms downgrade the
+preview to a small square thumbnail, which looks like the site is sharing its
+favicon.
+
+After changing the card, refresh the platform caches — they hold the old image
+for days otherwise:
+
+- LinkedIn — <https://www.linkedin.com/post-inspector/>
+- Facebook / WhatsApp — <https://developers.facebook.com/tools/debug/>
+- X — <https://cards-dev.twitter.com/validator>
+
+---
+
 ## Commands
 
 ```bash
