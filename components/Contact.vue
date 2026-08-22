@@ -127,7 +127,7 @@ const onSubmit = handleSubmit(async (formValues) => {
 
                     <!-- Fiverr shortcut -->
                     <div class="card overflow-hidden">
-                        <div class="border-l-4 border-brand-fiverr p-6">
+                        <div class="border-l-4 border-red-500 p-6">
                             <p class="inline-flex items-center gap-2 font-black text-gray-800 dark:text-gray-100">
                                 <IconsFiverr class="size-5" />
                                 Rather use Fiverr?
@@ -136,7 +136,7 @@ const onSubmit = handleSubmit(async (formValues) => {
                                 Order through Fiverr for escrow, buyer protection and a fixed delivery date — the
                                 messaging thread stays on the platform.
                             </p>
-                            <a :href="fiverr.url" target="_blank" rel="noopener noreferrer" class="btn-fiverr mt-5 w-full">
+                            <a :href="fiverr.url" target="_blank" rel="noopener noreferrer" class="btn-secondary mt-5 w-full">
                                 Message me on Fiverr
                                 <IconsArrowUpRight class="size-4" />
                             </a>

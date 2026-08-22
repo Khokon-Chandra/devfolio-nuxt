@@ -34,7 +34,7 @@ const serviceIcons = { IconsLaravel, IconsNuxt, IconsMySql, IconsCICD }
                             <ul class="grid gap-x-4 gap-y-1.5 pt-1 sm:grid-cols-2">
                                 <li v-for="point in service.points" :key="point"
                                     class="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                                    <IconsCheck class="size-3.5 shrink-0 text-emerald-500" />
+                                    <IconsCheck class="tick size-3.5" />
                                     {{ point }}
                                 </li>
                             </ul>

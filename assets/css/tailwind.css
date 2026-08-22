@@ -78,9 +78,16 @@
            focus-visible:ring-offset-transparent disabled:opacity-60 disabled:cursor-not-allowed;
   }
 
+  /* Red is the single accent — reserve this for the one primary action per view. */
   .btn-primary {
     @apply btn bg-red-500 text-white hover:bg-red-600 focus-visible:ring-red-400
            shadow-lg shadow-red-500/20 hover:shadow-red-500/30;
+  }
+
+  /* Strong but neutral — for marketplace CTAs that shouldn't compete with red. */
+  .btn-secondary {
+    @apply btn bg-gray-900 text-white hover:bg-gray-700 focus-visible:ring-gray-500
+           dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-white;
   }
 
   .btn-outline {
@@ -88,9 +95,10 @@
            hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:ring-gray-400;
   }
 
-  .btn-fiverr {
-    @apply btn bg-brand-fiverr text-white hover:brightness-95 focus-visible:ring-brand-fiverr
-           shadow-lg shadow-emerald-500/20;
+  /* Muted tick for "what's included" lists. Green would reintroduce the clash,
+     and red reads as an error next to body copy. */
+  .tick {
+    @apply shrink-0 text-gray-400 dark:text-gray-500;
   }
 
   /* ── Forms ───────────────────────────────────────────────────────── */

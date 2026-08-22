@@ -6,13 +6,6 @@ module.exports = {
             screens: {
                 'xs': '480px',
             },
-            colors: {
-                brand: {
-                    fiverr: '#1DBF73',
-                    upwork: '#14A800',
-                    freelancer: '#29B2FE',
-                },
-            },
             keyframes: {
                 'fade-up': {
                     '0%': { opacity: '0', transform: 'translateY(14px)' },

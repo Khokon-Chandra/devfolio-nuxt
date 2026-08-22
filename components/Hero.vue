@@ -31,7 +31,7 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
                 <!-- ── Copy ─────────────────────────────────────────── -->
                 <div class="animate-fade-up text-center lg:text-left">
                     <p v-if="profile.available"
-                        class="inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+                        class="inline-flex items-center gap-2.5 rounded-full border border-gray-200 bg-white/70 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-gray-600 dark:border-gray-700 dark:bg-gray-800/60 dark:text-gray-300">
                         <span class="relative flex h-2 w-2">
                             <span
                                 class="absolute inline-flex h-full w-full animate-ping-slow rounded-full bg-emerald-500" />
@@ -61,14 +61,14 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
 
                     <!-- CTAs -->
                     <div class="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-                        <a :href="fiverr.url" target="_blank" rel="noopener noreferrer" class="btn-fiverr">
-                            <IconsFiverr inverted class="size-5" />
-                            Hire me on Fiverr
-                        </a>
-
                         <button class="btn-primary" @click="scroll.scrollToSection('Contact')">
                             Start a project
                         </button>
+
+                        <a :href="fiverr.url" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                            <IconsFiverr class="size-5" />
+                            Hire me on Fiverr
+                        </a>
 
                         <a :href="profile.resume" download class="btn-outline">
                             <IconsDownload class="size-4" />

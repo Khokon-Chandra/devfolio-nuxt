@@ -28,15 +28,15 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
             <!-- ── Gig cards ───────────────────────────────────────── -->
             <div v-if="sorted.length" class="grid gap-6" :class="sorted.length > 1 ? 'md:grid-cols-2' : 'max-w-2xl mx-auto'">
                 <article v-for="gig in sorted" :key="gig.url" class="card card-hover flex flex-col p-7"
-                    :class="gig.featured ? 'ring-2 ring-brand-fiverr/40 border-brand-fiverr/40' : ''">
+                    :class="gig.featured ? 'ring-2 ring-red-500/30 border-red-500/40' : ''">
 
                     <div class="flex items-center justify-between gap-3">
-                        <span class="inline-flex items-center gap-2 text-sm font-bold text-brand-fiverr">
+                        <span class="inline-flex items-center gap-2 text-sm font-bold text-gray-500 dark:text-gray-400">
                             <IconsFiverr class="size-5" />
                             Fiverr gig
                         </span>
                         <span v-if="gig.featured"
-                            class="rounded-full bg-brand-fiverr/10 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-brand-fiverr">
+                            class="rounded-full bg-red-500/10 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-red-500">
                             Most ordered
                         </span>
                     </div>
@@ -52,7 +52,7 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
                     <ul class="mt-5 space-y-2">
                         <li v-for="item in gig.includes" :key="item"
                             class="flex items-start gap-2.5 text-sm text-gray-600 dark:text-gray-400">
-                            <IconsCheck class="mt-1 size-3.5 shrink-0 text-emerald-500" />
+                            <IconsCheck class="tick mt-1 size-3.5" />
                             <span>{{ item }}</span>
                         </li>
                     </ul>
@@ -75,7 +75,7 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
                             </p>
                         </div>
 
-                        <a :href="gig.url" target="_blank" rel="noopener noreferrer" class="btn-fiverr">
+                        <a :href="gig.url" target="_blank" rel="noopener noreferrer" class="btn-primary">
                             Order on Fiverr
                             <IconsArrowUpRight class="size-4" />
                         </a>
@@ -85,8 +85,8 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
 
             <!-- fallback if every gig is removed from data/gigs.ts -->
             <div v-else class="mx-auto max-w-xl text-center">
-                <a :href="fiverr.url" target="_blank" rel="noopener noreferrer" class="btn-fiverr">
-                    <IconsFiverr inverted class="size-5" />
+                <a :href="fiverr.url" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                    <IconsFiverr class="size-5" />
                     Browse my gigs on Fiverr
                 </a>
             </div>
@@ -113,8 +113,8 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
                             {{ platform.tagline }}
                         </p>
 
-                        <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-bold"
-                            :style="{ color: platform.color }">
+                        <span
+                            class="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-gray-500 transition group-hover:text-red-500 dark:text-gray-400">
                             {{ platform.cta }}
                             <IconsArrowUpRight class="size-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </span>
