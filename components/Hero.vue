@@ -58,7 +58,19 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
                         <span class="text-gray-500 dark:text-gray-400">Nuxt 3 · TypeScript · MySQL</span>
                     </p>
 
-                    <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                    <!--
+                      On mobile the badge, role and stack lines directly above already
+                      say "remote" and name the stack, and the Fiverr button sits right
+                      below — so only the end-to-end breadth is new information. The
+                      full pitch returns from sm up, where there is room for it.
+                    -->
+                    <p class="mt-6 text-base leading-relaxed text-gray-600 dark:text-gray-400 sm:hidden">
+                        From database design and REST APIs to type-safe interfaces — I build the
+                        whole stack.
+                    </p>
+
+                    <p
+                        class="mt-6 hidden max-w-xl mx-auto text-lg leading-relaxed text-gray-600 dark:text-gray-400 sm:block lg:mx-0">
                         I build and scale web applications end-to-end — from database design and REST APIs
                         to complex, type-safe interfaces. I work fully remote with distributed teams, and
                         take on freelance projects through Fiverr, Upwork and Freelancer.
