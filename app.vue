@@ -26,7 +26,7 @@ useHead({
         '@type': 'Person',
         name: profile.name,
         url: profile.site,
-        image: profile.avatar,
+        image: `${profile.site}${profile.avatar}`,
         email: `mailto:${profile.email}`,
         jobTitle: `Remote ${profile.role}`,
         description: profile.summary,
@@ -58,7 +58,7 @@ useHead({
         '@type': 'ProfessionalService',
         name: `${profile.name} — Freelance Web Development`,
         url: `${profile.site}/#Hire`,
-        image: profile.avatar,
+        image: `${profile.site}${profile.avatar}`,
         description:
           'Freelance Laravel, PHP, Vue 3 and Nuxt 3 development — REST APIs, multi-tenant applications, database performance work and CI/CD setup.',
         provider: { '@type': 'Person', name: profile.name, url: profile.site },

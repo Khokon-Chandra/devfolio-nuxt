@@ -12,7 +12,8 @@ export const profile = {
   location: 'Dhaka, Bangladesh',
   timezone: 'UTC+6',
   overlap: '4–6 h daily overlap with CET / 3+ h with EST',
-  avatar: 'https://avatars.githubusercontent.com/u/58368293?v=4',
+  // Self-hosted so the share card, the hero and the JSON-LD all agree.
+  avatar: '/khokon-chandra.jpg',
   site: 'https://khokon.vercel.app',
 
   /** Set to false when you stop taking new client work. */
