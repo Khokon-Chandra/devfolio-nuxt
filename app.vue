@@ -26,7 +26,7 @@ useHead({
         image: profile.avatar,
         email: `mailto:${profile.email}`,
         telephone: profile.phone,
-        jobTitle: profile.role,
+        jobTitle: `Remote ${profile.role}`,
         description: profile.summary,
         // Every profile that proves this is the same person.
         sameAs: [
@@ -37,11 +37,6 @@ useHead({
           '@type': 'PostalAddress',
           addressLocality: 'Dhaka',
           addressCountry: 'BD',
-        },
-        worksFor: {
-          '@type': 'Organization',
-          name: 'Körbler GmbH',
-          url: 'https://www.1tool.com',
         },
         alumniOf: {
           '@type': 'EducationalOrganization',
@@ -81,18 +76,18 @@ useHead({
  * `meta` array (that shape is silently dropped).
  */
 useSeoMeta({
-  title: 'Khokon Chandra | Full-Stack Laravel & Nuxt Developer for Hire',
+  title: 'Khokon Chandra | Remote Laravel & Vue Developer for Hire',
   description:
-    'Freelance full-stack developer with 4+ years building Laravel, PHP, Vue 3 and Nuxt 3 applications. Available for REST API, CRM and performance work — hire me on Fiverr, Upwork or Freelancer.',
+    'Remote full-stack developer with 4+ years building Laravel, PHP, Vue 3 and Nuxt 3 applications. 4–6 h overlap with CET, 3+ h with EST. Hire me on Fiverr, Upwork or Freelancer.',
   author: profile.name,
   keywords:
-    'Laravel developer for hire, freelance PHP developer, Vue.js developer, Nuxt.js developer, REST API development, MySQL optimization, full-stack developer Bangladesh, Fiverr Laravel developer',
+    'remote Laravel developer, hire Laravel developer, remote Vue.js developer, freelance PHP developer, Nuxt.js developer, REST API development, MySQL optimization, Fiverr Laravel developer, Upwork Laravel developer',
 
   ogType: 'website',
-  ogSiteName: `${profile.name} — Full-Stack Developer`,
-  ogTitle: 'Khokon Chandra | Full-Stack Laravel & Nuxt Developer for Hire',
+  ogSiteName: `${profile.name} — Remote Full-Stack Developer`,
+  ogTitle: 'Khokon Chandra | Remote Laravel & Vue Developer for Hire',
   ogDescription:
-    'Laravel, PHP, Vue 3 and Nuxt 3 developer with 4+ years of experience. Available for freelance and contract work.',
+    'Remote Laravel, PHP, Vue 3 and Nuxt 3 developer with 4+ years of experience. Available for freelance and contract work.',
   ogUrl: `${profile.site}/`,
   ogImage: ogImage,
   ogImageAlt: `${profile.name} — Full-Stack Developer`,
@@ -101,7 +96,7 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   twitterSite: '@khokonchandra12',
   twitterCreator: '@khokonchandra12',
-  twitterTitle: 'Khokon Chandra — Full-Stack Laravel & Nuxt Developer',
+  twitterTitle: 'Khokon Chandra — Remote Laravel & Vue Developer',
   twitterDescription:
     'Expert in PHP, Laravel, MySQL, REST APIs and Vue/Nuxt. Available for freelance projects.',
   twitterImage: ogImage,

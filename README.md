@@ -13,7 +13,7 @@ update the site.
 
 | File | What it holds |
 | --- | --- |
-| `data/profile.ts` | Name, role, email, phone, location, availability, stats, social + freelance-platform links |
+| `data/profile.ts` | Name, role, email, phone, location, availability, remote signals, stats, social + freelance-platform links |
 | `data/gigs.ts` | **Fiverr gigs**, the services grid, and the "how it works" steps |
 | `data/experience.ts` | Work history (mirrors the CV) |
 | `data/projects.ts` | Selected work + published packages |
@@ -98,19 +98,6 @@ contact form still works.
 > Development Settings. Nuxt now emits `.vercel/output` (Build Output API v3), which Vercel
 > detects on its own.
 
-## Updating the CV
-
-`public/khokon-chandra-cv.pdf` is served by the "Download CV" buttons. To regenerate it
-from the HTML source:
-
-```bash
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless --disable-gpu --no-pdf-header-footer \
-  --print-to-pdf="public/khokon-chandra-cv.pdf" \
-  "file:///Users/khokonchandra/Documents/resume/khokon_chandra_cv.html"
-```
-
----
 
 ## Commands
 

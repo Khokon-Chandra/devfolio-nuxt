@@ -2,15 +2,17 @@
 
 export const projects = [
   {
-    title: '1Tool CRM',
-    subtitle: 'Multi-tenant CRM/ERP suite',
+    title: 'CRM Dashboard',
+    subtitle: 'Multi-tenant CRM/ERP interface',
     description:
-      'The front end of a 30+ module CRM/ERP platform used across Europe — multi-view calendars, recurring events and a typed Pinia data layer over a Laravel REST API.',
+      'A CRM/ERP dashboard built in Nuxt 3 — multi-view calendars, recurring events and a fully typed Pinia data layer over a Laravel REST API.',
     stack: ['Nuxt 3', 'TypeScript', 'PrimeVue', 'Pinia', 'Tailwind'],
     image: '/1tool.png',
+    // NOTE: this demo URL still contains the product name. Rename the Vercel
+    // project (or drop the link) if you want it fully anonymous.
     url: 'https://1tool-one.vercel.app/',
     linkLabel: 'View live demo',
-    tag: 'Client work',
+    tag: 'Live demo',
   },
   {
     title: 'AlgoCode Online Judge',

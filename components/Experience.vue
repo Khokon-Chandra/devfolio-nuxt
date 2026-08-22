@@ -1,6 +1,5 @@
 <script setup>
 import { experiences } from '~/data/experience'
-import { profile } from '~/data/profile'
 </script>
 
 <template>
@@ -48,13 +47,6 @@ import { profile } from '~/data/profile'
                     </div>
                 </li>
             </ol>
-
-            <div class="text-center">
-                <a :href="profile.resume" download class="btn-outline">
-                    <IconsDownload class="size-4" />
-                    Download full CV (PDF)
-                </a>
-            </div>
         </div>
     </section>
 </template>

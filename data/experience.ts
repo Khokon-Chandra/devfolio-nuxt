@@ -3,17 +3,18 @@
 export const experiences = [
   {
     title: 'Full-Stack Developer',
-    company: 'Körbler GmbH — 1Tool',
-    location: 'Wagna, Austria · Remote',
-    context: 'CRM/ERP software (1tool.com)',
+    // Current employer intentionally not named.
+    company: 'European SaaS Product Team',
+    location: 'Austria · Fully remote',
+    context: 'Multi-tenant CRM/ERP platform',
     date: 'Apr 2025 – Present',
     current: true,
     stack: ['Nuxt 3', 'TypeScript', 'PrimeVue', 'Pinia', 'Tailwind', 'Laravel'],
     lists: [
-      'Develop the front end of 1Tool Suite, a large-scale multi-tenant CRM/ERP platform with 30+ modules, using Nuxt 3, TypeScript, PrimeVue, Pinia and Tailwind CSS.',
-      'Build and maintain the calendar & scheduling module — multi-view calendars and recurring events, integrated with the Laravel REST API backend.',
+      'Develop the front end of a large-scale multi-tenant CRM/ERP platform with 30+ modules, using Nuxt 3, TypeScript, PrimeVue, Pinia and Tailwind CSS.',
+      'Build and maintain the calendar & scheduling module — multi-view calendars and recurring events, integrated with a Laravel REST API backend.',
       'Work daily with AI-assisted tooling (Claude Code, Cursor) in production — reviewing, validating and shipping output under a zero-warning ESLint policy.',
-      'Collaborate async in English with the Austrian team through GitLab merge requests and code reviews.',
+      'Collaborate fully async in English across time zones through merge requests and code review.',
       'Ship via GitLab CI/CD to Cloudflare Pages and maintain German/English localization with Nuxt i18n.',
     ],
   },

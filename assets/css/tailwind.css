@@ -84,10 +84,19 @@
            shadow-lg shadow-red-500/20 hover:shadow-red-500/30;
   }
 
-  /* Strong but neutral — for marketplace CTAs that shouldn't compete with red. */
-  .btn-secondary {
-    @apply btn bg-gray-900 text-white hover:bg-gray-700 focus-visible:ring-gray-500
-           dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-white;
+  /* Marketplace green, solid — use when it is the only CTA in its card. */
+  .btn-market {
+    @apply btn bg-brand-fiverr text-white hover:bg-brand-fiverr-dark
+           focus-visible:ring-brand-fiverr shadow-lg shadow-emerald-600/20;
+  }
+
+  /* Marketplace green, tonal — use when it sits beside the red primary.
+     Red and green coexist because the WEIGHT differs, not the hue. */
+  .btn-soft {
+    @apply btn border border-emerald-200 bg-emerald-50 text-emerald-700
+           hover:border-emerald-300 hover:bg-emerald-100 focus-visible:ring-emerald-400
+           dark:border-emerald-500/25 dark:bg-emerald-500/10 dark:text-emerald-400
+           dark:hover:bg-emerald-500/20;
   }
 
   .btn-outline {

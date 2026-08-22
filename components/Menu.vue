@@ -35,7 +35,7 @@ const toggleDark = () => {
 
         <div class="flex items-center gap-3">
             <a :href="fiverr.url" target="_blank" rel="noopener noreferrer"
-                class="btn-secondary !px-4 !py-2 !text-xs" @click="sidebarStore.closeSidebar()">
+                class="btn-soft !px-4 !py-2 !text-xs" @click="sidebarStore.closeSidebar()">
                 <IconsFiverr class="size-4" />
                 Hire on Fiverr
             </a>

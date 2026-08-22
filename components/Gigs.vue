@@ -28,7 +28,7 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
             <!-- ── Gig cards ───────────────────────────────────────── -->
             <div v-if="sorted.length" class="grid gap-6" :class="sorted.length > 1 ? 'md:grid-cols-2' : 'max-w-2xl mx-auto'">
                 <article v-for="gig in sorted" :key="gig.url" class="card card-hover flex flex-col p-7"
-                    :class="gig.featured ? 'ring-2 ring-red-500/30 border-red-500/40' : ''">
+                    :class="gig.featured ? 'ring-2 ring-brand-fiverr/35 border-brand-fiverr/40' : ''">
 
                     <div class="flex items-center justify-between gap-3">
                         <span class="inline-flex items-center gap-2 text-sm font-bold text-gray-500 dark:text-gray-400">
@@ -36,7 +36,7 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
                             Fiverr gig
                         </span>
                         <span v-if="gig.featured"
-                            class="rounded-full bg-red-500/10 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-red-500">
+                            class="rounded-full bg-brand-fiverr/10 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-brand-fiverr">
                             Most ordered
                         </span>
                     </div>
@@ -75,7 +75,7 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
                             </p>
                         </div>
 
-                        <a :href="gig.url" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        <a :href="gig.url" target="_blank" rel="noopener noreferrer" class="btn-market">
                             Order on Fiverr
                             <IconsArrowUpRight class="size-4" />
                         </a>
@@ -85,7 +85,7 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
 
             <!-- fallback if every gig is removed from data/gigs.ts -->
             <div v-else class="mx-auto max-w-xl text-center">
-                <a :href="fiverr.url" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                <a :href="fiverr.url" target="_blank" rel="noopener noreferrer" class="btn-market">
                     <IconsFiverr class="size-5" />
                     Browse my gigs on Fiverr
                 </a>
@@ -114,7 +114,7 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
                         </p>
 
                         <span
-                            class="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-gray-500 transition group-hover:text-red-500 dark:text-gray-400">
+                            class="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-gray-500 transition group-hover:text-brand-fiverr dark:text-gray-400">
                             {{ platform.cta }}
                             <IconsArrowUpRight class="size-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </span>

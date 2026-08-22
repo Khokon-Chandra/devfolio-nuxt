@@ -45,34 +45,37 @@ const fiverr = platforms.find(p => p.key === 'fiverr')
                         Hi, I'm {{ profile.firstName }}.
                     </h1>
 
-                    <p class="mt-3 text-xl sm:text-2xl font-bold text-red-500">
-                        {{ profile.role }}
+                    <p class="mt-3 text-xl sm:text-2xl font-bold text-gray-700 dark:text-gray-200">
+                        Remote {{ profile.role }}
                     </p>
-                    <p class="mt-1 font-semibold text-gray-500 dark:text-gray-400">
-                        {{ profile.headline }}
+
+                    <!-- The palette is the stack: Laravel red + Vue green. -->
+                    <p class="mt-2 text-base font-bold sm:text-lg">
+                        <span class="text-brand-laravel">Laravel</span>
+                        <span class="mx-1.5 text-gray-300 dark:text-gray-600">+</span>
+                        <span class="text-brand-vue">Vue&nbsp;3</span>
+                        <span class="mx-1.5 text-gray-300 dark:text-gray-600">·</span>
+                        <span class="text-gray-500 dark:text-gray-400">Nuxt 3 · TypeScript · MySQL</span>
                     </p>
 
                     <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
                         I build and scale web applications end-to-end — from database design and REST APIs
-                        to complex, type-safe interfaces. Currently on the remote engineering team at
-                        <strong class="font-bold text-gray-700 dark:text-gray-200">Körbler GmbH (Austria)</strong>,
-                        and available for freelance projects.
+                        to complex, type-safe interfaces. I work fully remote with distributed teams, and
+                        take on freelance projects through Fiverr, Upwork and Freelancer.
                     </p>
 
                     <!-- CTAs -->
-                    <div class="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-                        <button class="btn-primary" @click="scroll.scrollToSection('Contact')">
+                    <div
+                        class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center lg:justify-start">
+                        <button class="btn-primary w-full sm:w-auto"
+                            @click="scroll.scrollToSection('Contact')">
                             Start a project
                         </button>
 
-                        <a :href="fiverr.url" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                        <a :href="fiverr.url" target="_blank" rel="noopener noreferrer"
+                            class="btn-soft w-full sm:w-auto">
                             <IconsFiverr class="size-5" />
                             Hire me on Fiverr
-                        </a>
-
-                        <a :href="profile.resume" download class="btn-outline">
-                            <IconsDownload class="size-4" />
-                            Download CV
                         </a>
                     </div>
 

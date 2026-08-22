@@ -15,20 +15,27 @@ export const profile = {
   timezone: 'UTC+6',
   overlap: '4–6 h daily overlap with CET / 3+ h with EST',
   avatar: 'https://avatars.githubusercontent.com/u/58368293?v=4',
-  resume: '/khokon-chandra-cv.pdf',
   site: 'https://khokon.vercel.app',
 
   /** Set to false when you stop taking new client work. */
   available: true,
-  availabilityNote: 'Available for freelance & contract work',
+  availabilityNote: 'Available for remote work',
 
   summary:
-    'Full-stack developer with 4+ years of experience building and scaling web applications with PHP/Laravel and Vue/Nuxt. Currently on the remote engineering team at Körbler GmbH (Austria), developing 1Tool — a CRM/ERP suite used across Europe.',
+    'Remote full-stack developer with 4+ years building and scaling web applications in Laravel and Vue/Nuxt. Currently on a distributed engineering team for a European SaaS product, and open to freelance and contract work.',
+
+  /** Remote-work signals — the questions every client asks before hiring. */
+  remote: [
+    { label: 'Time zone', value: 'Dhaka, UTC+6' },
+    { label: 'Overlap', value: '4–6 h with CET · 3+ h with EST' },
+    { label: 'Working language', value: 'English, async-first' },
+    { label: 'Reply time', value: 'Within 24 hours' },
+  ],
 }
 
 export const stats = [
   { value: '4+', label: 'Years building for the web' },
-  { value: '30+', label: 'CRM/ERP modules shipped' },
+  { value: '100%', label: 'Remote, across time zones' },
   { value: '10k+', label: 'Daily API calls served' },
   { value: '90k+', label: 'Platform users supported' },
 ]
